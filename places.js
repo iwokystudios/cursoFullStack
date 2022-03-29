@@ -29,4 +29,3 @@ function init() {
 }
 
 window.onload = init;
->>>>>>> main
