@@ -1,4 +1,3 @@
-asdasdasd;
 places = [
     {name : "Barcelona",
     img : "barcelona.jpg"},
