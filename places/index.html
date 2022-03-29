@@ -5,8 +5,20 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="main">Hola, qué tal?</div>
-    <button type="submit" onclick="muestraDulces()">Muestra dulces</button>
+    <div id="main">
+        <h2>¿Qué dulce quieres comprar?</h2>
+        <form value="">
+            <input type="radio" id="chocolate" name="fav_language" value="chocolate">
+                <label for="chocolate">Chocolate</label><br>
+            <input type="radio" id="css" name="fav_language" value="bombombum">
+                <label for="bombombum">Bombombum</label><br>
+            <input type="radio" id="gominolas" name="fav_language" value="gominolas">
+                <label for="gominolas">Gominolas</label><br>
+            <input type="radio" id="donut" name="fav_language" value="donut">
+                <label for="donut">Donuts</label><br>
+            <button type="submit" onclick="muestraDulces()">Muéstrame este dulce</button>
+        </form>
+    </div>    
     <script src="myScript.js"></script>
 </body>
 </html>
