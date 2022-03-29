@@ -1,45 +1,224 @@
-:root {
+/* <--------- Basic Styling --------------> */
 
+* {
+    font-size: 10px;    
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
+h1, h2, h3, h4 {    
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.2;
+    margin: 2.5rem 0 0.5rem;
+    font-weight: 900;
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.2rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
+h4 {
+    font-size: 2rem;
+}
+p {
+    font-size: 1.8rem;
+    max-width: 70ch;
+    margin: 1rem 0;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    font-size: 1.8rem;
+    color: inherit;
+    text-decoration: none;
+}
+.btn {
+    background-color: #de0000;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-radius: 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* <--------- Body --------------> */
+
 body {
-    background-color: #b8b8b8;
+    background-color: #f0f0f0;
+    width: 100%;
 }
 #main {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 1440px;
+    max-width: 1200px;
     margin: 0 auto;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    overflow: hidden;
+    min-height: 100vh;
 }
-.card {
-    background-color: #fafafa;
-    grid-column: span 1;
-    height: 400px;
+
+/* <--------- Title --------------> */
+
+.text-title {
+    grid-column: span 12;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    margin: 0;
+    color: #666666;
 }
+.text-title h4 {
+    margin: 0.5rem 0 !important;
+    text-transform:uppercase;
+}
+.caption {
+    font-size: 1.4rem;
+}
+/* <--------- Card --------------> */
+
+.card {
+    background-color: #fafafa;
+    grid-column: span 4;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 1rem;
+    height: 38vh;
+}
+
+/* <--------- Card Image --------------> */
 .card-img {
     padding: 0;
     height: 300px;
     overflow: hidden;
-    flex: 3;
+    position: relative;
+    height: 28vh;
 }
 .card-img img {
-    width: 100%;
+    min-width: 100%;
+    max-height: 150%;
+    position: absolute;
+    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
 }
 .card-img-text {
     position: absolute;
-    top: 0;
-    bottom: 1rem;
+    padding: 0 0 0.5rem 1rem;
+    color: white;
+    background-image: linear-gradient(to bottom, rgba(245,246,252,0), rgba(37, 37, 37, 0.73));
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
+.card-img-text h4 {
+    margin: 0 !important;
+    line-height: 1;
+    font-weight: 600;
+}
+.card-img-text span {
+    font-weight: 500;
+}
+.discount-corner {
+    position: absolute;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem 4rem 0;
+    background-color: #ff9900;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transform: rotate(45deg);
+    right: -12%;
+    top: -6%;
+
+}
+/* <--------- Card Text --------------> */
 .card-text {
-    padding: 2rem 1rem;
-    flex: 1;
+    padding: 0.5rem 1rem 1rem;
+    height: 10vh;
+    grid-column: span 1;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr;
+}
+.card-rate {
+    grid-column: 1/4;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: #444;
+}
+.rate-number {
+    background-color: #6fb743;
+    color: white;
+    border-radius: 50%;
+    padding: 0.4rem;
+}
+.card-offer {
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-size: 1.4rem;
+    color: #444;
+}
+.old-price {
+    text-decoration: line-through;
+}
+.card-price {
+    grid-column: 2/3;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1;    
+    color: #444;
+    display: flex;
+    align-items: flex-end;
 }
 .card-text h4 {
-    font-size: 2rem;
-    padding: 0;
+    margin: 0;
+    grid-column: 1;
 }
-.card-text p {
-    font-size: 1rem;
+
+.card-btn {
+    grid-column: 4/5;
+    height: 5vh;
+}
+
+
+@media screen and (max-width: 760px) {
+
+    /* <--------- Card --------------> */
+
+    .card {
+        grid-column: span 6;
+        margin-bottom: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 530px) {
+
+    /* <--------- Card --------------> */
+
+    .card {
+        grid-column: span 12;
+        margin-bottom: 2rem;
+    }
+
 }
