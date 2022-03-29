@@ -1,0 +1,27 @@
+* {
+    padding: 10;
+    background-color:gainsboro;
+}
+
+h1 {
+    color:black;
+}
+
+p {
+    color: aliceblue;
+}
+
+div.primerp {
+    background-image: ivory;
+
+}
+
+div.segundop { 
+    background-color:ivory;
+}
+
+button {
+    background-color: red;
+    color: cornsilk;
+
+}
