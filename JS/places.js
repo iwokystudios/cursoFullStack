@@ -9,26 +9,20 @@ const places = [
 function placeTemplate(place) {
 
     return `
-    <div>
-        <div>
-            <img width='300px' src='${place.img}'/>
-        </div>
-        <div>
-            <h2>${place.name}</h2>
-        </div>
+ <div class="card">
+    <div class="contentImg">
+        <img src='${place.img}'/>
     </div>
+    <div class="content">
+    ${place.name}
+    </div>
+ </div>    
     `;
 }
-
 
 function init() {
 
     const main = document.getElementById("main");
-   
-   places.map((place, i) => {
-
-    main.innerHTML += placeTemplate(place);
-
-    });
+    places.map(item => main.innerHTML += placeTemplate(item));
 }
 window.onload = init;

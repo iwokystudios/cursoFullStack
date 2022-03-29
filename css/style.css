@@ -1,9 +1,24 @@
-body{
-    background-color: #6e6c6c;
+body {
+    background-color: gray;
+}
+.card {
+    width: 90%;
+    background-color: white;
 }
 .content{
-    background-color: #fff;
-    padding: 10px;
-    margin: 0;
-    border: 1px solid;
+    font-size: 25px;
+    border: solid 1px black;
+    margin: 1px;
+}
+.card .contentImg img {
+    width: 400px;
+    height: 250px;
+    padding: 20px;
+    border: solid 1px black;
+    margin: 20px;
+}
+#main{
+    border: solid 1px #ff0000;
+    display: flex;
+    flex-direction: row;
 }
