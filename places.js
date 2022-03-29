@@ -1,12 +1,12 @@
 const places =  [
     {
-        name: "Barcelona", img: "barcelona.jpg"
+        name: "Barcelona", img: "img/barcelona.jpg"
     },
     {
-        name: "Londres", img: "londres.jpg"
+        name: "Londres", img: "img/londres.jpg"
     },
     {
-        name: "París", img: "paris.jpg"
+        name: "París", img: "img/paris.jpg"
     } 
 ];
 
