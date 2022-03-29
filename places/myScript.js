@@ -41,7 +41,9 @@ const candys = [
 
 function muestraDulces() {
     const main = document.getElementById("main");   
-    candys.map((candy)=>{
-        main.innerHTML += `<br> <img src="${candy.img}" width=100Math.round(px></img> <br>2)${candy.name} <br> El precio es de ${candy.precio}$`
+    candys.map(candy=>{
+        main.innerHTML += `<br><img src="${candy.img}" width=100></img>
+        ${candy.name}
+        El precio es de ${candy.precio}$`
     })
 }
