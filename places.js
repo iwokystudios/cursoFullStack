@@ -12,16 +12,17 @@ const places =  [
 
 function placeTemplate(place) {
     return `
-    <div>
-        <div>
-            <img width='100px' src='${place.img}'/>
+    <div class="card">
+        <div class="contentImg">
+            <img src='${place.img}'/>
         </div>
-        <div>
+        <div class="content">
         ${place.name}
         </div>
-    </div>
-    `;asdfasdf
+    </div>    
+    `;
 }
+
 
 function init() {
     const main = document.getElementById("main");

@@ -1,0 +1,14 @@
+body {
+    background-color: gray;
+}
+.card {
+    width: 400px;
+    height: 450px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .contentImg img {
+    width: 100%;
+}
