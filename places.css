@@ -1,0 +1,23 @@
+        .body {
+            background-color: aquamarine;
+        }
+        
+        .main {
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            min-width: 300px;
+            overflow: hidden;
+            height: auto;
+            width: 50%
+        }
+        
+        .foto {
+            margin-bottom: 20px;
+            height: 350px;
+            border: none;
+            background-color: #fff;
+            position: relative;
+            list-style: none;
+            padding: 0;
+        }
