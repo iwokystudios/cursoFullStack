@@ -1,0 +1,45 @@
+:root {
+
+}
+body {
+    background-color: #b8b8b8;
+}
+#main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1440px;
+    margin: 0 auto;
+    gap: 30px;
+}
+.card {
+    background-color: #fafafa;
+    grid-column: span 1;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.card-img {
+    padding: 0;
+    height: 300px;
+    overflow: hidden;
+    flex: 3;
+}
+.card-img img {
+    width: 100%;
+}
+.card-img-text {
+    position: absolute;
+    top: 0;
+    bottom: 1rem;
+}
+.card-text {
+    padding: 2rem 1rem;
+    flex: 1;
+}
+.card-text h4 {
+    font-size: 2rem;
+    padding: 0;
+}
+.card-text p {
+    font-size: 1rem;
+}

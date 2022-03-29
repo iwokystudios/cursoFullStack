@@ -21,12 +21,14 @@ const places01 =  [
 
 function placeTemplate(place) {
     return `
-    <div>
-        <div>
-            <img width='100px' src='${place.img}'/>
+    <div class="card">
+        <div class="card-img">
+            <img src="${place.img}" alt="">
+            <div class="card-img-text"><p>Texto de imagen</p></div>
         </div>
-        <div>
-        ${place.name}
+        <div class="card-text">
+            <h4>${place.name}</h4>
+            <p></p>
         </div>
     </div>
     `;
