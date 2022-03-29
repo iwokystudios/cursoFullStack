@@ -1,14 +1,17 @@
-const places = [
-    { 
-        name: "barcelona", img: "barcelona.jpg"
+
+
+const places =  [
+    {
+        name: "Barcelona", img: "barcelona.jpg"
     },
     {
-         name: "londres", img: "londres.jpg"
+        name: "Londres", img: "londres.jpg"
     },
     {
-         name: "paris", img: "paris.jpg"
-    }
-]; 
+        name: "París", img: "paris.jpg"
+    } 
+];
+
 
 function placeTemplate(place) {
     return `
@@ -19,41 +22,15 @@ function placeTemplate(place) {
         <div>
         ${place.name}
         </div>
-       </div>
-       `
-
+ 
+=======
+    </div>
+    `;
 }
-
-
 
 function init() {
     const main = document.getElementById("main");
-    
-    places.map((place, placeIndex) => {
-    
-        main.innerHTML += placeTemplate(place);
-});
+    places.map(item => main.innerHTML += placeTemplate(item));
 }
-
-
-// function init2() {
-//     const main = document.getElementById("main");
-//     const parrafos = document.getElementsByTagName("p");
-
-//     // Método clásico para recorrer listas
-//     // for(let i = 0; i < list.length; i++) {
-//     //     console.log(list[i]);
-//     // }
-//     // Con map recorremos los elementos de una lista
-//     // He pasado la referencia de una función
-//     list.map((places, index) => {
-//         main.innerHTML += "<p>" + places + "</p>";
-//     });
-
-//     for(let i = 0; i < parrafos.length; i++) {
-//         parrafos[i].innerHTML += " :)";
-//     }
-
-// }
 
 window.onload = init;
