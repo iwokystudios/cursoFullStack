@@ -1,32 +1,32 @@
-const places = [
-    { name : "Barcelona", img : "barcelona.jpg"},
-
-    { name : "Londres", img : "londres.jpg"},
-
-    { name : "Paris", img : "paris.jpg"},
-
+const places =  [
+    {
+        name: "Barcelona", img: "barcelona.jpg"
+    },
+    {
+        name: "Londres", img: "londres.jpg"
+    },
+    {
+        name: "París", img: "paris.jpg"
+    } 
 ];
 
 function placeTemplate(place) {
-    return; `
+    return `
     <div>
         <div>
-            <img width='300px' src='${places[0].img}'/>
+            <img width='100px' src='${place.img}'/>
         </div>
         <div>
-            ${places[0].name};
+        ${place.name}
         </div>
     </div>
     `;
-
 }
-
 
 function init() {
     const main = document.getElementById("main");
-    
-    places.map((place) => {main.innerHTML += placeTemplate(place));
-
+    places.map(item => main.innerHTML += placeTemplate(item));
 }
 
 window.onload = init;
+>>>>>>> main
