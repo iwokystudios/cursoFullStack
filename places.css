@@ -1,0 +1,12 @@
+body {
+    background-color: gray;
+}
+
+.card.contImg {
+    background: white;
+
+}
+
+.card.contDes {
+    color: blue;
+}

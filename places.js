@@ -3,11 +3,11 @@ const places = [{ name: "Barcelona", img: "barcelona.jpg" },
 { name: "Paris", img: "paris.jpg" }];
 function placeTemplate(place) {
 
-    return main.innerHTML = `<div>
-    <div> <img width='350px' src='${place.img}'/></div>
-    <div>${place.name}</div>
+    return main.innerHTML = `<div class="card">
+    <div class="contImg"> <img width='350px' src='${place.img}'/></div>
+    <div class="contDes">${place.name}</div>
     </div>`;
-    
+
 }
 function init() {
     const main = document.getElementById("main");
