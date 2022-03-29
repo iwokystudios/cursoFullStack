@@ -20,7 +20,7 @@ function placeTemplate(place) {
         ${place.name}
         </div>
     </div>
-    `;
+    `;asdfasdf
 }
 
 function init() {
