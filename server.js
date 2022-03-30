@@ -9,12 +9,27 @@ const port = 3000;
 // el primero es el PATH y el segundo es la función que resuelve la REQUEST (petición)
 app.post('/product', (request, response) => {
     console.log(request.body);      // your JSON
-    response.send(request.body);    // echo the result back
+    response.send("");   // echo the result back
 });
 
 app.get('/', function(request, response) {
   response.send('Hello World!')
 });
+
+app.get('/ciudades', (request, response) => {
+    response.json([
+        {
+            name: "Barcelona", img: "barcelona.jpg"
+        },
+        {
+            name: "Londres", img: "londres.jpg"
+        },
+        {
+            name: "París", img: "paris.jpg"
+        } 
+    ]);
+});
+
 
 app.get('/products', (peticion, respuesta) => {
     const color = peticion.query.color;
