@@ -26,7 +26,7 @@ function placeTemplate(place) {
 
 function init() {
     const main = document.getElementById("main");
-    places.map(item => main.innerHTML += placeTemplate(item));
+    // places.map(item => main.innerHTML += placeTemplate(item));
 }
 
 window.onload = init;
