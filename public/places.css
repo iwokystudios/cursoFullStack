@@ -1,0 +1,31 @@
+body {
+    background-color: gray;
+}
+
+.cardContainer {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.card {
+    
+    height: 450px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .contentImg img {
+    width: 100%;
+}
+
+
+.flexCards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
