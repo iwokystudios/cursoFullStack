@@ -43,15 +43,16 @@ a {
     background-color: #de0000;
     border: none;
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2rem;
     text-align: center;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 800;
     border-radius: 0.1rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* <--------- Body --------------> */
@@ -61,7 +62,7 @@ body {
     width: 100%;
 }
 #main {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -82,11 +83,14 @@ body {
     color: #666666;
 }
 .text-title h4 {
-    margin: 0.5rem 0 !important;
+    margin: 0 !important;
     text-transform:uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1;
 }
 .caption {
     font-size: 1.4rem;
+    line-height: 1.2;
 }
 /* <--------- Card --------------> */
 
@@ -158,6 +162,7 @@ body {
     display: grid;
     grid-template-columns: 0.5fr 2fr 2fr;
 }
+/* <--------- *** Rate  --------------> */
 .card-rate {
     grid-column: 1/4;
     font-size: 1.4rem;
@@ -170,6 +175,7 @@ body {
     border-radius: 50%;
     padding: 0.4rem;
 }
+/* <--------- *** Offer  --------------> */
 .card-offer {
     grid-column: 1/2;
     display: flex;
@@ -180,7 +186,9 @@ body {
 }
 .old-price {
     text-decoration: line-through;
+    line-height: 1;
 }
+/* <--------- *** Price  --------------> */
 .card-price {
     grid-column: 2/3;
     font-size: 2.4rem;
@@ -194,14 +202,14 @@ body {
     margin: 0;
     grid-column: 1;
 }
-
+/* <--------- *** Button  --------------> */
 .card-btn {
     grid-column: 4/5;
     height: 5vh;
 }
 
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 850px) {
 
     /* <--------- Card --------------> */
 
@@ -212,7 +220,7 @@ body {
 
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 580px) {
 
     /* <--------- Card --------------> */
 
