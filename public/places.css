@@ -1,0 +1,25 @@
+body {
+    background-color: gray;
+}
+.card{
+    width: 300px;
+    height: 450px;
+    display: flex;    
+}
+
+.card.contImg {
+    background: white;
+
+}
+
+.card.contDes {
+    color: blue;
+}
+
+.flexCards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+
+}
