@@ -1,0 +1,37 @@
+body {
+    background-color: white;
+}
+
+.container {
+    display: flex;
+}
+
+.card {
+    width: 25em;
+    height: 17em;
+    border: 1px solid black;
+    flex-direction: column;
+}
+
+img {
+    width: 25em;
+    height: 13em;
+    position: absolute;
+    visibility: ;
+}
+
+.nombre {
+    position: relative;
+    color: red;
+    border: 5px solid green;
+    
+}
+
+.imagen {
+    width: 25em;
+    height: 13em;
+}
+
+.parte-boton {
+    border: 2px solid blue;
+}
