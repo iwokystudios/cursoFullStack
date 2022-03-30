@@ -1,0 +1,90 @@
+body {
+    background-color: rgb(141, 133, 133);
+}
+
+.newbox {
+min-width: 200px;
+display: inline-grid;
+max-width: 200px;
+font-size: 12px;
+color: #444;
+text-align: left;
+-webkit-text-size-adjust: 100%;
+-webkit-font-smoothing: antialiased !important;
+text-rendering: optimizeLegibility;
+font-family: open_sansregular,sans-serif;
+box-sizing: border-box;
+padding: 0;
+outline: 0;
+vertical-align: baseline;
+background-color: #fff;
+border: 1px solid #ddd;
+height: 298px;
+margin: 0;
+position: relative;
+overflow: hidden;
+}
+
+p.locality{
+    -webkit-text-size-adjust: 100%;
+text-rendering: optimizeLegibility;
+-webkit-font-smoothing: antialiased;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+display: block;
+font-family: open_sansregular,sans-serif;
+font-size: 20px;
+font-weight: normal;
+color: #444;
+line-height: 14px;
+text-align: left;
+margin-bottom: 3px;
+}
+
+.newbox div a {
+    -webkit-text-size-adjust: 100%;
+text-rendering: optimizeLegibility;
+font-weight: normal;
+box-sizing: border-box;
+outline: 0 none;
+background-color: #de0000;
+border-radius: 2px;
+border: 0 none;
+color: #fff;
+cursor: pointer;
+display: block;
+font-size: 22px !important;
+font-family: "atrapaloWebBold" !important;
+-webkit-font-smoothing: antialiased;
+margin: 0;
+text-align: center;
+text-decoration: none;
+text-transform: uppercase;
+padding: 0 25px;
+position: absolute;
+bottom: 10px;
+line-height: 38px;
+height: 38px;
+width: 93%;
+}
+
+img {
+    font-size: 12px;
+    text-align: left;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased !important;
+    text-rendering: optimizeLegibility;
+    font-family: open_sansregular,sans-serif;
+    color: #de0000;
+    width: 100%;
+    aspect-ratio: auto 298 / 135;
+    height: 135px;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    display: inline;
+}
