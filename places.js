@@ -1,4 +1,3 @@
-
 const places =  [
     {
         name: "Barcelona", img: "barcelona.jpg"
@@ -13,14 +12,21 @@ const places =  [
 
 function placeTemplate(place) {
     return `
-    <div>
-        <div>
-            <img width='100px' src='${place.img}'/>
+        <div class="imagen">
+                 
+                 <img width='100px' src='${place.img}'/> 
         </div>
-        <div>
-        ${place.name}
+                                            <br><br>
+        <div class="info">
+                 <p class="opi"> Opiniones </p>
         </div>
-    </div>
+
+                                            <br><br>
+
+        <div class="precio">
+                <p class="prec"> Ahora 899€ </p>
+                ${place.name}
+        </div>
     `;
 }
 
@@ -29,5 +35,24 @@ function init() {
     places.map(item => main.innerHTML += placeTemplate(item));
 }
 
-
 window.onload = init;
+
+
+
+
+
+
+
+
+
+
+
+
+//     // <div>
+//     //     <div>
+//     //         <img width='100px' src='${place.img}'/> 
+//     //     </div>
+//     //     <div>
+//     //     ${place.name}
+//     //     </div>
+//     // </div>
