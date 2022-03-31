@@ -9,7 +9,15 @@ const port = 3000;
 // el primero es el PATH y el segundo es la función que resuelve la REQUEST (petición)
 app.post('/product', (request, response) => {
     console.log(request.body);      // your JSON
-    response.send("");   // echo the result back
+
+    const pedido = request.body.pedido;
+    let contador = 0;
+    pedido.map(pizza => {
+        if (pizza === "Pizza barbacoa") {
+            contador = contador + 1;
+        }
+    });
+    response.send("Has pedido " + contador + " de tipo Pizza Barbacoa");   // echo the result back
 });
 
 app.get('/', function(request, response) {
