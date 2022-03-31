@@ -53,3 +53,5 @@ app.get('/products', (peticion, respuesta) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 });
+
+//TENGO UNA MALDICIÓN Y NO ENTIENDO UNA MIERDA :))
