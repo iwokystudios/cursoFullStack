@@ -1,0 +1,55 @@
+
+body {
+    background-color: rgb(152, 165, 165);
+}
+
+.Container {
+    width: 50px;
+    height: 350px;
+}
+
+
+
+.Container .Imagen  img {
+    background-color: aquamarine;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.Container {
+    background-color: antiquewhite;
+    width: 400px;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+}
+
+.Container .Imagen img {
+   
+    width: 100%;
+}
+
+.Description {
+    position: absolute;
+
+}
+
+.Precio {
+    padding: 20px;
+
+} */ 
