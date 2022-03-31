@@ -10,7 +10,6 @@ body {
 }
 
 .card {
-    
     height: 450px;
     background-color: white;
     display: flex;
@@ -21,11 +20,9 @@ body {
     width: 100%;
 }
 
-
 .flexCards {
     display: flex;
     flex-direction: row;
     gap: 20px;
     justify-content: flex-start;
 }
-

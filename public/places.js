@@ -12,8 +12,8 @@ function muestraPaises() {
         }
         if (peticion.readyState == 3) {
             console.log("Se está procesando la petición");
-        }                
-        if(peticion.readyState == 4) {
+        }
+        if (peticion.readyState == 4) {
             console.log("Hemos recibido la respuesta del servidor");
             const respuesta = JSON.parse(peticion.responseText);
             const main = document.getElementById("main");
@@ -22,6 +22,7 @@ function muestraPaises() {
     };
     peticion.open('GET', 'http://localhost:3000/ciudades', true);
     peticion.send(null);
+
 }
 
 function placeTemplate(place) {
