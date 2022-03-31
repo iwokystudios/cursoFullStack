@@ -1,55 +1,31 @@
-
 body {
-    background-color: rgb(152, 165, 165);
+    background-color: gray;
 }
 
-.Container {
-    width: 50px;
-    height: 350px;
-}
-
-
-
-.Container .Imagen  img {
-    background-color: aquamarine;
+.cardContainer {
+    display: grid;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-.Container {
-    background-color: antiquewhite;
-    width: 400px;
+.card {
+    
     height: 450px;
+    background-color: white;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
-.Container .Imagen img {
-   
+.card .contentImg img {
     width: 100%;
 }
 
-.Description {
-    position: absolute;
 
+.flexCards {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-start;
 }
 
-.Precio {
-    padding: 20px;
-
-} */ 
