@@ -13,3 +13,30 @@ function perdirpizzas() {
     peticion.send(objetoConvertidoATexto);
 
 }
+function muestraPizzas() {
+    const peticion = new XMLHttpRequest();
+    peticion.onreadystatechange = () => {
+        if (peticion.readyState == 0) {
+            console.log("Petición iniciada");
+        }
+        if (peticion.readyState == 1) {
+            console.log("Conexión establecida con el servidor");
+
+        } if (peticion.readyState == 2) {
+            console.log("El servidor ha recibido la información");
+
+        } if (peticion.readyState == 3) {
+            console.log("Se esta procesando la información");
+
+        } if (peticion.readyState == 4) {
+            console.log("Hemos recibido la respuesta del servidor");
+            const respuesta = JSON.parse(peticion.responseText);
+            const main = document.getElementById("main");
+            respuesta.map(item => main.innerHTML += placeTemplate(item))
+
+
+        }
+
+    }
+
+}
