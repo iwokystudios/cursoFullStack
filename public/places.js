@@ -35,12 +35,5 @@ function init() {
     places.map(item => main.innerHTML += placeTemplate(item));
 }
 
-<<<<<<< HEAD
-=======
-function init() {
-    const main = document.getElementById("main");
-    places.map(item => main.innerHTML += placeTemplate(item));
-}
 
->>>>>>> main
 window.onload = init;
