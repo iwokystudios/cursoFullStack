@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places</title>
+    <script src="pizzas.js"></script>
+    <link rel="stylesheet" href="pizzas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+    <div id="main">
+        <div class="btn" onclick="pedirPizzas()">Mostrar Pizzas</div>
+        
+        <form class="user-login-form">
+            <label for="">Name</label>
+            <input type="text">
+            <label for="">Lastname</label>
+            <input type="text">
+            <label for="">User</label>
+            <input type="text">
+            <label for="">Email</label>
+            <input type="text">
+            <label for="">Password</label>
+            <input type="password">
+            <div class="btn" onclick="enviarUsuario()">Enviar Usuario</div>
+        </form>
+    </div>
+    <!-- Envia los datos de un usuario
+    name
+    lastname
+    password
+    email 
+    lo recibe en el path /user
+    usuario creado
+    si el nombre es pepe . responder: ni de coña -->
+</body>
+</html>

@@ -40,3 +40,31 @@ app.get('/products', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
+
+app.post('/pedirPizzas', (req, res) => {
+    const pedido = req.body.pedido;
+    let contador = 0;
+    pedido.map(pizza => {
+      if (pizza === "Pizza barbacoa") {
+        contador++;
+      }
+    });
+    res.send(`Haz pedido ${contador} de tipo Pizza Barbacoa`)
+
+});
+
+app.post('/user', (req, res) => {
+  const users = req.body;
+  users.map((user) => {
+    if (user.name === "Pepe") {
+      res.send(`
+      Ni de coña, ${user.name} cambiate el nombre
+      ${user}
+      `);
+    } else {
+      res.send("Usuario creado con exito");
+    }
+
+  });
+});
