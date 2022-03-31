@@ -2,6 +2,10 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+app.post('/products', (req, res) => {
+
+})
+
 app.get('/products', (req, res) => {
     const color = req.query.color;
 
