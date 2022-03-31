@@ -1,3 +1,10 @@
+function muestraPaises() {
+    const peticion = new XMLHttpRequest();
+    peticion.onreadystatechange = muestra
+
+}
+
+
 const places =  [
     {
         name: "Barcelona", img: "barcelona.jpg"

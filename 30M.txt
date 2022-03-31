@@ -1,0 +1,2 @@
+Creamos un servidor con Node JS 
+Hacemos peticiones al servidor y lo programamos para que nos devuelva un JSON
