@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 const port = 3000;
+app.use(express.json());
+app.use(express.static('public'));
 
 // post y get siempre se usan con dos parámetros:
 // el primero es el PATH y el segundo es la función que resuelve la REQUEST (petición)

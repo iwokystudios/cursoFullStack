@@ -5,11 +5,14 @@ const objetoPedido = {
     ]
 };
 function perdirpizzas() {
-    objetoConvertidoATexto = JSON.stringify(objetoPedido);
+    const objetoConvertidoATexto = JSON.stringify(objetoPedido);
+
     const peticion = new XMLHttpRequest();
+
     peticion.onreadystatechange = () => { };
     peticion.open('POST', 'http://localhost:3000/pedirPizzas', true);
-    peticion.setRequestHeader('Content-Type', "application/jason;charset=UTF-8");
+    peticion.setRequestHeader('Content-Type', "application/json;charset=UTF-8");
+
     peticion.send(objetoConvertidoATexto);
 
 }
