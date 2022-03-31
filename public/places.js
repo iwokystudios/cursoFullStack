@@ -35,6 +35,27 @@ function init() {
     places.map(item => main.innerHTML += placeTemplate(item));
 }
 
+
+function muestraPaises() {
+    const peticion = new XMLHttpRequest();
+    peticion.onreadystatechangev = muestraContenido;
+    peticion.open('GET', 'http://localhost:3000/ciudades', true);
+    peticion.send(null)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 window.onload = init;
 
 
