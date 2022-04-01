@@ -90,9 +90,14 @@ esLondres(listaCasas);
 
 novaLista=(lista)=>{
     novaArray=[];
-    novaArray.push(lista[0], lista[1]);
+    for (pos = 0; pos < lista.lenght && pos < 2; pos++) {
+        novaArray.push(lista[pos]);
+    }
+    // return novaArray;
+    // novaArray.push(lista[0], lista[1]);
     return novaArray;
 }
+
 console.log(novaLista(listaCasas));
 
 // console.log(listaAlumnos);
