@@ -1,2 +1,6 @@
-Creamos un servidor con Node JS 
+Creamos un servidor con Node JS (Node JS sirve para crear programas que él mismo compilará y transformará en C, C++, y posteriormente a Ensamblador) 
 Hacemos peticiones al servidor y lo programamos para que nos devuelva un JSON
+
+BUSCAMOS EN GOOGLE PARA SABER MÁS --> petición ajax javascript xmlhttprequest
+
+el querystring es lo que se pone en las
