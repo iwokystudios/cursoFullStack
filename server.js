@@ -7,11 +7,7 @@ const port = 3000;
 
 // post y get siempre se usan con dos parámetros:
 // el primero es el PATH y el segundo es la función que resuelve la REQUEST (petición)
-<<<<<<< HEAD
-    app.post('/product', (request, response) => {
-=======
 app.post('/product', (request, response) => {
->>>>>>> main
     console.log(request.body);      // your JSON
 
     const pedido = request.body.pedido;
@@ -56,8 +52,4 @@ app.get('/products', (peticion, respuesta) => {
 // El primer parámetro de la función es el PUERTO 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> main
