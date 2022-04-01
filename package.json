@@ -1,11 +1,7 @@
 {
   "name": "cursofullstack",
   "version": "1.0.0",
-<<<<<<< HEAD
-  "description": "cursoFullStack",
-=======
   "description": "Backend con express",
->>>>>>> main
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
