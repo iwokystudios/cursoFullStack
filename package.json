@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "name": "cursofullstack",
     "version": "1.0.0",
     "description": "Backend con express",
@@ -20,3 +21,27 @@
         "express": "^4.17.3"
     }
 }
+=======
+  "name": "cursofullstack",
+  "version": "1.0.0",
+  "description": "Backend con express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iwokystudios/cursoFullStack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iwokystudios/cursoFullStack/issues"
+  },
+  "homepage": "https://github.com/iwokystudios/cursoFullStack#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3"
+  }
+}
+>>>>>>> main
