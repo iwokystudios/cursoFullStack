@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+<<<<<<< HEAD
   title = 'frontAngular';
+=======
+  heroe = "SPIDERMAN";
+  villano = "VENOM";
+>>>>>>> main
 }
