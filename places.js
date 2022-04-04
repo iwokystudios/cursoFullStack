@@ -28,4 +28,5 @@ function init() {
     places.map(item => main.innerHTML += placeTemplate(item));
 }
 
+
 window.onload = init;

@@ -10,7 +10,7 @@ const port = 3000;
 app.post('/product', (request, response) => {
     console.log(request.body);      // your JSON
 
-    const pedido = request.body.pedido;
+    const pedido = request.body.usuarios;
     let contador = 0;
     pedido.map(pizza => {
         if (pizza === "Pizza barbacoa") {
@@ -19,6 +19,32 @@ app.post('/product', (request, response) => {
     });
     response.send("Has pedido " + contador + " de tipo Pizza Barbacoa");   // echo the result back
 });
+
+
+
+
+
+
+//Método POST para los USER
+app.post('/user', (request, response) => {
+    console.log(request.body); //U Json
+    const usuarios = request.body;
+    let numObjetos = usuarios.length;
+    let indexPepe = 0;
+    usuarios.map((current, index) => {
+        if(current.name === "Pepe"){
+            indexPepe = index;
+        }
+    });
+    response.send(`Existen ${numObjetos} y Pepe se encuentra en el index ${indexPepe}`);
+});
+
+
+
+
+
+
+
 
 app.get('/', function(request, response) {
   response.send('Hello World!')
@@ -49,7 +75,7 @@ app.get('/products', (peticion, respuesta) => {
 });
 
 // Llamando a la función listen iniciamos el servidor
-// El primer parámetro de la función es el PUERTO 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-});
+// El primer parámetro de la función es el PUERTO
+app.listen(port, ()=> {
+    console.log("SERVIDOR ONLINE")
+})
