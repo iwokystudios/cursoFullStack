@@ -6,7 +6,7 @@ const pass = document.getElementById('pass');
 const passConfirma = document.getElementById('passConfirma');
 
 form.addEventListener('submit', (e) => {
-  e.preventDefault();
+  e.preventDefault(); 
   valido = true;
   validaCampos();
   if (valido) createUser({ usuario: usuario.value, email: email.value, pass: pass.value });

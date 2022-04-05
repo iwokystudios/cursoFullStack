@@ -75,23 +75,30 @@ const casa = {                                               /*Realizo un objeto
     ciudad: "Barcelona"
 };
 
-    const ciudadEscojida = "Madrid";                            /*Guardo el valor que quiero añadir en una variable.*/
+                              /*Guardo el valor que quiero añadir en una variable.*/
 
     const cambiarCiudad = (vieja, nueva) => {                       /*CREO UNA FUNCUON*/
         vieja.ciudad = nueva;                                          
 
 
     }
-    cambiarCiudad(casa, ciudadEscojida);                            /*LLAMO A LA FUNCION*/
+    cambiarCiudad(casa, "Madrid");                            /*LLAMO A LA FUNCION*/
     
     console.log(casa);                                                 /*CONSOLE LOG Y EL OBJETO QUE QUIERA VISUALIZAR*/
 
 
 /*IMPORTANTISIMO JODER VIEJA Y NUEVA EN ESTE CASO, SERAN SUSTIUDAS INTERNAMENTE POR LOS VALORES CASA Y CIUDAD ESCOJIDA*/
 
+const cambiarDireccion = (vieja, nueva) => {                       /*CREO UNA FUNCUON*/
+        vieja.direccion = nueva;                                          
+
+
+    }
+    cambiarDireccion(casa, "canberdura");
 
 
 
+    console.log(casa); 
 
 
 
