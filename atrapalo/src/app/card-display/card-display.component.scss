@@ -1,0 +1,36 @@
+/* <--------- Body --------------> */
+
+
+  
+  app-card {
+    background-color: #fafafa;
+    grid-column: span 4;
+    overflow: hidden;
+    margin: 0 1rem;
+    height: 38vh;
+  }
+
+/* <--------- Title --------------> */
+
+.text-title {
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    margin: 0;
+    color: #666666;
+}
+.text-title h4 {
+    margin: 0 !important;
+    text-transform:uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1;
+    font-size: 30px;
+}
+.caption {
+    font-size: 14px;
+    line-height: 1.2;
+}
+

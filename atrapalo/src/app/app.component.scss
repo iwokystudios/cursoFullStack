@@ -1,0 +1,56 @@
+:host {
+    font-size: 10px;    
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  h1, h2, h3, h4 {    
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.2;
+    margin: 2.5rem 0 0.5rem;
+    font-weight: 900;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 18px;
+    max-width: 70ch;
+    margin: 1rem 0;
+  }
+  ul {
+    list-style-type: none;
+  }
+  a {
+    font-size: 18px;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  
+  /* <--------- Body --------------> */
+  
+  body {
+    background-color: #f0f0f0;
+    width: 100%;
+  }
+  
+  app-card-display {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    overflow: hidden;
+    min-height: 100vh;
+  }

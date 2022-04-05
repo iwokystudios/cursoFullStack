@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { card}
-import { CITIES } from 'src/mocks-cities';
-import { City } from 'src/model/city';
+import { CITIES } from 'src/mocks/mocks-cities';
 
 @Component({
   selector: 'app-card-display',
@@ -9,6 +7,7 @@ import { City } from 'src/model/city';
   styleUrls: ['./card-display.component.scss']
 })
 export class CardDisplayComponent implements OnInit {
+  cities = CITIES;
 
   constructor() { }
 

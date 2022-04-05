@@ -1,4 +1,4 @@
-import { City } from "src/model/city";
+import { City } from "src/models/city";
 
 export const CITIES : City[] = [
     {

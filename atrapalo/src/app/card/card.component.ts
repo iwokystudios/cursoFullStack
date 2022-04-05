@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { City } from 'src/model/city';
+import { City } from 'src/models/city';
 
 @Component({
   selector: 'app-card',
