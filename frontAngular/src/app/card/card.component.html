@@ -1,0 +1,62 @@
+<div *ngIf="city" class="card">
+    <div class="card-img">
+        <!-- <img src={{ city.img }} alt=""> -->
+        <img [src]="city.img" alt="">
+        <div class="card-img-text">
+            <h4>{{ city.name }}</h4>
+            <span>{{ city.nights }} Noche/s</span>
+        </div>
+        <span class="discount-corner">21%</span>
+    </div>
+    <div class="card-text">
+        <div class="card-rate">
+            <span class="rate-number">{{ city.rate }}</span>
+            <span class="rate-level">{{ city.rateWord }}</span>
+            <span class="opinion">( {{ city.reviews }} opiniones)</span>
+        </div>
+        <div class="card-offer">
+            <span class="since">
+                desde
+            </span>
+            <span class="old-price">{{ city.oldPrice }}</span>
+        </div>
+        <div class="card-price">
+            {{ city.price }}
+            <span class="euro-symbol">€</span>
+        </div>
+        <a href="#" class="btn card-btn">VER MÁS</a>
+    </div>
+</div>
+
+
+
+<!-- <div class="card">
+    <div class="card-img">
+        <img src="{{ city.img }}" alt="">
+        <div class="card-img-text">
+            <h4>{{ city.name }}</h4>
+            <span>{{ city.nights }} noche/s</span>
+        </div>
+        <span class="discount-corner">-21%</span>
+    </div>
+    <div class="card-text">
+        <div class="card-rate">
+            <span class="rate-number">{{ city.rate }}</span>
+            <span class="rate-level">{{ city.rateWord }}</span>
+            <span class="opinion">(165 Opiniones)</span>
+        </div>
+        <div class="card-offer">
+            <span class="since">
+                desde
+            </span>
+            <span class="old-price">
+                862€
+            </span>
+        </div> 
+        <div class="card-price">
+            1.056
+            <span class="euro-symbol">€</span>
+        </div>
+        <a href="#" class="btn card-btn">VER MÁS</a>
+    </div>
+</div> -->
