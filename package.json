@@ -1,7 +1,7 @@
 {
-  "name": "servidor",
+  "name": "cursofullstack",
   "version": "1.0.0",
-  "description": "cursoFullStack",
+  "description": "Backend con express",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/iwokystudios/cursoFullStack#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.3"
   }
 }
