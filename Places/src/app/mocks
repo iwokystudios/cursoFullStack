@@ -1,0 +1,13 @@
+import{Place } from '../model/place';
+export const PLACES: Place[]=[
+    {
+        name: "Barcelona", preu:250, imagen:"src/"
+    },
+    {
+        name: "Barcelona", preu:250, imagen:"src:"
+    },
+    {
+        name: "Barcelona", preu:250, imagen:"src:"
+    },
+    
+]
