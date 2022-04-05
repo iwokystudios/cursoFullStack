@@ -1,6 +1,23 @@
 <h2>My Heroes</h2>
 <ul class="heroes">
+<<<<<<< HEAD
   <li *ngFor="let hero of heroes">
     <div>class="badge">{{hero.id}}</span> {{hero.name}}</div>
   </li>
 </ul>
+=======
+  <li *ngFor="let hero of laListaDeHeroes"> 
+    <button
+      [class.selected]="hero === selectedHero"
+      type="button"
+      (click)="onSelect(hero)"
+    >
+      <span class="badge">{{ hero.id }}</span>
+      <span class="name">{{ hero.name }}</span>
+    </button>
+  </li>
+</ul>
+
+<app-hero-detail [elHeroeQueMePasan]="selectedHero"></app-hero-detail>
+
+>>>>>>> 5864f9d7fe33aaf4d3ae8fb87043147c73420d99
