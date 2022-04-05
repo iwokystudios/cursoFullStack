@@ -1,0 +1,23 @@
+h2 {
+    color: green;
+    text-shadow: 30px;
+    position: absolute;
+}
+
+img {
+    width: 100%;
+
+}
+
+.box__card{
+    position: relative;
+    max-width: 250px;
+    border: 2px solid;
+}
+
+.box__card-img{
+    border-bottom: 1px dotted;
+    position: relative;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
