@@ -1,0 +1,4 @@
+- ngOnInit what is?
+- subscribe - asyncrhonous?
+- private log ??
+- Angular Material

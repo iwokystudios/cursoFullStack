@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CITIES } from 'src/mocks/mocks-cities';
+import { City } from 'src/models/city';
+import { CityService } from '../city.service';
 
 @Component({
   selector: 'app-card-display',
@@ -7,11 +8,16 @@ import { CITIES } from 'src/mocks/mocks-cities';
   styleUrls: ['./card-display.component.scss']
 })
 export class CardDisplayComponent implements OnInit {
-  cities = CITIES;
+  cities : City[] = [];
 
-  constructor() { }
+  constructor(private cityService: CityService) { }
 
   ngOnInit(): void {
+    this.getCities();
   }
 
+  getCities(): void {
+    this.cityService.getCities()
+    .subscribe(cities => this.cities = cities);
+  }
 }
