@@ -2,3 +2,24 @@
 - subscribe - asyncrhonous?
 - private log ??
 - Angular Material
+- Why messages public - private 
+- Que esta en el documento y que esta en la base de datos
+
+
+#Ejercicio
+
+Hacer 3 funciones en Javascript
+listEmployees[] name, age, salary - 18-40años
+10 employees
+1. 
+    1 parametro de entrada que es la listaAlumno
+    devolver una lista que tenga todos los que tienen menos de 30 y ganan
+    mas de 1500€
+
+2.
+    Funcion con dos parametros, lista y nombre
+    devuelve lista con todos los que tienen ese name
+
+3. 
+    Funcion con 2 params, lista e increase % de salario.
+    Retorna la lista con todos los salarios incrementados
