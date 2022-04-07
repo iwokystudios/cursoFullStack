@@ -1,7 +1,11 @@
 <div class="box__card">
-    <div class="box__card-img">
-        <h2>{{card.ciudad}} Details</h2>
-        <img [src]="card.img" [alt]="card.ciudad">
+    <div class="box__card-sup">
+        <div class="box__card-sup-img">
+            <img [src]="card.img" [alt]="card.ciudad">
+        </div>
+        <div class="box__card-sup-text grupo elementos_desde_izquierda">
+            <h2>{{card.ciudad}} Details</h2>
+        </div>
     </div>
     <div>
         <p><b>Ciudad: </b>{{card.ciudad}} <br>
