@@ -4,6 +4,12 @@
 - Angular Material
 - Why messages public - private 
 - Que esta en el documento y que esta en la base de datos
+- Handling Errors 
+    - operation?
+    - <T>
+    - of() result as T 
+- tap ? coje lo bueno? y el "_"
+- 
 
 
 #Ejercicio
