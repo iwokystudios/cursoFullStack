@@ -64,11 +64,12 @@ let listEmployees = [
     let excercise01 = employees => employees.filter(employee => employee.salary >=1500 && employee.age <= 30 );
     console.log(excercise01(listEmployees));
 
+
 // 2.
 //     Funcion con dos parametros, lista y nombre
 //     devuelve lista con todos los que tienen ese name
 
-    let excercise02 = (list, name) => list.filter(list => list.name == name);
+    let excercise02 = (list, name) => list.filter(list => list.name === name);
     console.log(excercise02(listEmployees, "Paco"));
 
 // 3. 
@@ -79,4 +80,7 @@ let listEmployees = [
         employee.salary *= (increase/100+1)
         return employee
     });
-    console.log(excercise03(listEmployees, 20))
+
+    let excercise04 = (list, increase) => list.map(employee => ({...employee, salary: employee.salary * increase}));    
+    console.log(excercise03(listEmployees, 0.2))
+    console.log(excercise04(listEmployees,1.2))

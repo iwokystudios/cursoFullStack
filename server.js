@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 var cors = require('cors');
+const { json } = require('express');
 
 app.use(express.json());
 app.use(express.static('public'));
@@ -72,6 +73,54 @@ app.post('/user', (req, res) => {
   });
 });
 
+/* <------------ HEROES ---------------> */
+
+app.get('/heroes', (req, res) => {
+  res.json(HEROES);
+});
+/* -- Display One Heroe -- */
+app.get('/heroes/:id', (req, res) => {
+  let id = req.params.id;
+  let heroSelected = HEROES.find(hero => hero.id == id);
+  res.json(heroSelected);
+})
+/* -- Update Heroe -- */
+app.put('/heroes', (req, res) => {
+  let idHero = req.body.id;
+  let nameHero = req.body.name;
+
+  let heroUpdated = () => HEROES.map((current) => {
+    if (current.id === idHero) {
+      current.name = nameHero;
+    }
+  });
+  heroUpdated();
+  res.json(HEROES.filter(hero => hero.id === idHero));
+})
+/* -- Create new Heroe -- */
+app.post('/heroes', (req, res) => {
+  HEROES.filter(h => h.id != req.body.id) ? HEROES.push(req.body) : new Error;
+  console.log(HEROES)
+  res.json(HEROES[HEROES.length-1]);
+})
+/* -- Delete Heroe -- */
+app.delete('/heroes/:id', (req, res) => {
+  var heroDeleted = {};
+  HEROES.map((hero, index) => {
+    if (hero.id === req.params.id) {
+      console.log(hero);
+      heroDeleted = hero;
+      HEROES.splice(index, 1);      
+    }
+  });
+  res.json(heroDeleted);
+  res.json(HEROES);
+})
+/* -- Search Heroe -- */
+app.get('/heroes/?=name=:term', (req, res) => {
+  let HEROES.filter(h => h.indexOf())
+})
+
 const HEROES = [
   { id: 11, name: 'Dr Nice' },
   { id: 12, name: 'Narco' },
@@ -85,15 +134,7 @@ const HEROES = [
   { id: 20, name: 'Tornado' }
 ];
 
-app.get('/heroes', (req, res) => {
-  res.json(HEROES);
-});
-
-app.get('/heroes/:id', (req, res) => {
-  let id = req.params.id;
-  let heroSelected = HEROES.find(hero => hero.id == id);
-  res.json(heroSelected);
-})
+/* <------------ CITIES ---------------> */
 
 app.get('/cities', (req,res) => {
   res.json(CITIES);
@@ -161,3 +202,4 @@ const CITIES = [
       reviews : 165
   }
 ];
+
