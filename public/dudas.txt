@@ -9,7 +9,23 @@
     - <T>
     - of() result as T 
 - tap ? coje lo bueno? y el "_"
-- 
+- cuando la funcion en subscribe es una arrow vacia, es cuando hay respuesta? put request example
+- why httpOptions and not headers directo?
+- selector # en html elementos, 
+- trim() devuelve un objeto en base a un string?
+- delete ---> el filter con h !== hero ??? que funcion cumple
+- search 
+    - tap --> x.lenght?
+    - why AsyncPipe? benefit?
+    Since *ngFor can't do anything with an Observable, use the pipe 
+    character (|) followed by async. This identifies Angular's AsyncPipe 
+    and subscribes to an Observable automatically so you won't have to do so
+    in the component class.
+    - SwitchMap?
+    - heroSearchComponent
+        - Put a trim in the subject?
+        - Remember that the component class does not subscribe to the heroes$ observable. 
+        That's the job of the AsyncPipe in the template.
 
 
 #Ejercicio
