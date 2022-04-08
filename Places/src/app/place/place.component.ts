@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { link } from 'fs';
 import { Place } from 'src/model/place';
 
 @Component({
@@ -9,8 +10,8 @@ import { Place } from 'src/model/place';
 export class places implements OnInit {
   place: Place = {
     preu: 1,
-    name: 'Windstorm'
-    imagen:"";
+    name: 'Windstorm',
+    imagen:"barcelona.png"
   };
 
   constructor() { }
