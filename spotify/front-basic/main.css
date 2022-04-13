@@ -1,0 +1,262 @@
+/* <---------------- Basic Styling ----------------> */
+html {
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+* {
+  font-size: 10px;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.5;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  color: #a7a7a7;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.2;
+  margin: 2.5rem 0 0.5rem;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.8rem;
+  max-width: 70ch;
+  margin: 1rem 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  font-size: 1.8rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.btn {
+  border: none;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  border-radius: 0.5vh;
+  margin: 1rem 0 0 0;
+  align-self: flex-start;
+}
+
+.btn-primary {
+  background-color: var(--primary-500);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: var(--primary-500);
+  color: white;
+  border: 2px solid var(--neutral-200);
+}
+
+/* <---------------- Body ----------------> */
+body {
+  background: var(--neutral-200);
+  height: 100vh;
+}
+
+/* <---------------- Playing Bar ----------------> */
+.now-playing-bar {
+  background-color: #181818;
+  position: fixed;
+  min-width: 760px;
+  width: 100%;
+  height: 95px;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2rem;
+}
+.now-playing-bar .player-playing {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+.now-playing-bar .player-playing .playing-img {
+  width: 56px;
+  height: 56px;
+}
+.now-playing-bar .player-playing .playing-img img {
+  object-fit: cover;
+  object-position: center center;
+}
+.now-playing-bar .player-playing .playing-info h4 {
+  margin: 0;
+}
+.now-playing-bar .player-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+.now-playing-bar .player-controls .controls-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  overflow: visible;
+}
+.now-playing-bar .player-controls .controls-buttons .controls {
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+}
+.now-playing-bar .player-controls .controls-buttons .play-pause {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 9px;
+}
+.now-playing-bar .player-controls .control-progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.now-playing-bar .player-controls .control-progress .progress-bar {
+  width: 70%;
+  height: 4px;
+  border-radius: 1rem;
+  background-color: #5e5e5e;
+}
+.now-playing-bar .player-settings {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.now-playing-bar .player-settings img {
+  width: 32px;
+  height: 32px;
+  padding: 8px;
+}
+.now-playing-bar .player-settings .volume-bar {
+  width: 100px;
+  height: 4px;
+  border-radius: 2rem;
+  background-color: #5e5e5e;
+}
+
+/* <---------------- Left Sidebar ----------------> */
+.left-sidebar {
+  background-color: #000;
+  width: 250px;
+  height: -webkit-calc(100% - 95px);
+  height: -moz-calc(100% - 95px);
+  height: calc(100% - 95px);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+.left-sidebar .lf-sidebar-menu {
+  margin: 0 2rem;
+  padding: 2rem 0;
+  border-bottom: 0.1rem solid #282828;
+  flex-shrink: 0;
+}
+.left-sidebar .lf-sidebar-menu .banner {
+  width: 60%;
+  margin-bottom: 2rem;
+}
+.left-sidebar .lf-sidebar-menu ul {
+  display: flex;
+  flex-direction: column;
+}
+.left-sidebar .lf-sidebar-menu ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+.left-sidebar .lf-sidebar-menu ul li img {
+  margin: 0 1.5rem 0 0;
+}
+.left-sidebar .lf-sidebar-menu .second-menu {
+  margin-top: 3rem;
+  font-size: 1.8rem !important;
+  font-weight: 700;
+}
+.left-sidebar .lf-sidebar-menu .second-menu li img {
+  width: 24px;
+  height: 24px;
+}
+.left-sidebar .playlists {
+  height: 100%;
+  overflow: scroll;
+  padding: 2rem 2rem;
+  overflow-x: hidden;
+  border-top: 2rem solid #121212;
+}
+.left-sidebar .playlists li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+.left-sidebar .playlists li img {
+  margin: 0 1.5rem 0 0;
+}
+
+/* <---------------- Top Bar ----------------> */
+.top-bar {
+  height: 10vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: #3e3e3e;
+}
+
+/* <---------------- Main View ----------------> */
+.main-view {
+  position: absolute;
+  background-color: #121212;
+  top: 0;
+  right: 0;
+  overflow: scroll;
+  height: 85vh;
+  width: -webkit-calc(100% - 250px);
+  width: -moz-calc(100% - 250px);
+  width: calc(100% - 250px);
+  overflow-x: hidden;
+}
+
+/* <---------------- Right Sidebar ----------------> */
+
+/*# sourceMappingURL=main.css.map */

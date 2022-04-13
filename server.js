@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 var cors = require('cors');
 const { json } = require('express');
+const url = require('url');
 
 app.use(express.json());
 app.use(express.static('public'));
@@ -75,8 +76,13 @@ app.post('/user', (req, res) => {
 
 /* <------------ HEROES ---------------> */
 
-app.get('/heroes', (req, res) => {
-  res.json(HEROES);
+app.get('/heroes', (req, res, next) => {
+  if (Object.keys(req.query).length === 0) {
+    res.json(HEROES);
+  } else {
+    next();
+  }
+  
 });
 /* -- Display One Heroe -- */
 app.get('/heroes/:id', (req, res) => {
@@ -99,26 +105,36 @@ app.put('/heroes', (req, res) => {
 })
 /* -- Create new Heroe -- */
 app.post('/heroes', (req, res) => {
-  HEROES.filter(h => h.id != req.body.id) ? HEROES.push(req.body) : new Error;
-  console.log(HEROES)
-  res.json(HEROES[HEROES.length-1]);
+  try {
+    if ((HEROES.filter(h => h.name == req.body.name)).length === 0) {
+    HEROES.push({
+      id: (HEROES[HEROES.length -1].id + 1), 
+      name: req.body.name
+    });
+    res.send(HEROES[HEROES.length-1]);
+    } else {
+      throw "Ya existe el heroe";
+    }
+  } catch (err) {
+    res.send(err)
+  } 
 })
 /* -- Delete Heroe -- */
 app.delete('/heroes/:id', (req, res) => {
   var heroDeleted = {};
   HEROES.map((hero, index) => {
-    if (hero.id === req.params.id) {
-      console.log(hero);
+    if (hero.id == req.params.id) {
       heroDeleted = hero;
       HEROES.splice(index, 1);      
     }
   });
   res.json(heroDeleted);
-  res.json(HEROES);
 })
 /* -- Search Heroe -- */
-app.get('/heroes/?=name=:term', (req, res) => {
-  let HEROES.filter(h => h.indexOf())
+app.get('/heroes', (req, res) => {
+  let nameSearch = req.query.name;
+  let heroSearch = HEROES.filter(hero => hero.name.toLowerCase().includes(nameSearch.toLowerCase()));
+  res.send(heroSearch);
 })
 
 const HEROES = [
