@@ -20,6 +20,12 @@ app.post('/product', (request, response) => {
     response.send("Has pedido " + contador + " de tipo Pizza Barbacoa");   // echo the result back
 });
 
+app.post('/user', (request, response) => {
+    console.log(request.body);      // your JSON
+
+    response.send({ msg: "se ha creado con éxito"});   // echo the result back
+});
+
 app.get('/', function(request, response) {
   response.send('Hello World!')
 });
