@@ -9,8 +9,8 @@ import { map } from 'rxjs';
 export class SpotifyService {
 
   public credentials = {
-    clientID: 'e4d048ac35cc482a865693a49264bb58',
-    clientSecret: '354a8202a9f44f5fb2ee8e6d74a8662f',
+    clientID: '',
+    clientSecret: '',
     accessToken: '',
   };
 
