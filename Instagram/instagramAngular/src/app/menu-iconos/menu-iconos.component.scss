@@ -1,0 +1,16 @@
+.iconos{
+        display: flex;
+        font-size: 24px;
+        max-width: 500px;
+        .img, fa-icon{            
+            overflow: hidden;       
+            padding: 0px 10px;        
+            img{     
+                width: 27px; 
+                height: 27px;  
+                border-radius: 50%;      
+                object-fit:fill;    
+            }      
+        }
+    }
+
