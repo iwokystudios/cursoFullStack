@@ -3,6 +3,7 @@ Angular:
 - Cuando un nuevo modulo? pages? layout? 
 - Authenticacion? guards?
 - Spotify - con api - back en nodejs o directo un services a la api? 
+- css variables sass globales?
 
 NodeJs 
 - Estructura basica 
