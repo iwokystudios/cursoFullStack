@@ -1,0 +1,191 @@
+/* You can add global styles to this file, and also import other style files */
+$scrollbar-vertical-size: 16px;
+$scrollbar-horizontal-size: 16px;  
+
+$primary-green-500: #1ed760;
+$background-base-200: #5e5e5e;
+$background-base-300: #3e3e3e;
+$background-base-350: #333;
+$background-base-400: #282828;
+$background-base-500: #121212;
+$background-base-600: #181818;
+$background-press: #000;
+$text-base: #fff;
+$text-subdued: #a7a7a7;
+$essential-negative: #e91429;
+$essential-warning: #ffa42b;
+$essential-announcement: #0d72ea;
+
+$mobile: 640px;
+$tablet: 768px;
+$desktop: 973px;
+$desktop-l:1160px;
+$large: 1300px;
+$xl-large: 1500px;
+
+@mixin mobile {
+    @media only screen and (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: $mobile) and (max-width: $tablet) {
+        @content;
+    }
+}
+@mixin desktop-xl {
+    @media only screen and (min-width: 0px) and (max-width: $desktop-l) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: $tablet) and (max-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media only screen and (min-width: $desktop) and (max-width: $large) {
+        @content;
+    }
+}
+
+@mixin xl-large {
+    @media only screen and (min-width: $large) and (max-width: $xl-large) {
+        @content;
+    }
+}
+
+html {
+    color: $text-subdued;
+}
+:root {
+    scrollbar-color: rgba(255,255,255,.3) transparent !important;
+    
+}
+
+* {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(255,255,255,.3) transparent !important;
+    $scrollbar-vertical-size: 16px;
+$scrollbar-horizontal-size: 16px;  
+
+$primary-green-500: #1ed760;
+$background-base-200: #5e5e5e;
+$background-base-300: #3e3e3e;
+$background-base-350: #333;
+$background-base-400: #282828;
+$background-base-500: #121212;
+$background-base-600: #181818;
+$background-press: #000;
+$text-base: #fff;
+$text-subdued: #a7a7a7;
+$essential-negative: #e91429;
+$essential-warning: #ffa42b;
+$essential-announcement: #0d72ea;
+
+$mobile: 640px;
+$tablet: 768px;
+$desktop: 973px;
+$desktop-l:1160px;
+$large: 1300px;
+$xl-large: 1500px;
+}
+
+/* Style the scrollbar background */
+::-webkit-scrollbar {
+    background: transparent;
+    width: 10px;
+  }
+  
+  /* Style the scrollbar handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,.3);
+  }
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+    margin: 2.5rem 0 0.5rem;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+    letter-spacing: -2px;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.8rem;
+    max-width: 70ch;
+    margin: 1rem 0;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    font-size: 1.8rem;
+    color: inherit;
+    text-decoration: none;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+.btn {
+    border: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.6rem;
+    border-radius: 0.5vh;
+    margin: 1rem 0 0 0;
+    align-self: flex-start;
+}
+
+.btn-player {
+    background-color: $primary-green-500;
+    border-radius: 50%;
+    border: none;
+    padding: 1rem;
+    width: 5rem;
+    height: 5rem;
+    padding: 1.5rem 1.4rem 1.5rem 1.6rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+    img {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+
+app-root {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto 95px;
+}

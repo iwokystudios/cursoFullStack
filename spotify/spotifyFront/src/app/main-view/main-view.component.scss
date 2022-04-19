@@ -1,0 +1,28 @@
+.wrapper {
+    width: 100%;
+    margin-top: 6.5rem;
+    padding: 0 3rem 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    max-width: 1955px;
+}
+
+app-app-top-menu {
+    height: 6.5rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: -webkit-calc(100% - 250px);
+    width:    -moz-calc(100% - 250px);
+    width:         calc(100% - 250px);
+    min-width: 518px;
+    padding: 0 3rem;
+    z-index: 1;
+    background: rgb(76,76,76);
+    background: linear-gradient(180deg, rgba(76,76,76,0.8) 0%, rgba(71,71,71,0.8) 80%); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}

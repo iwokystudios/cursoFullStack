@@ -1,0 +1,51 @@
+.top-bar-back {
+    color: white;
+    display: flex;
+    gap: 1rem;
+
+    button {
+        font-size: 2rem;
+        font-weight: 400;
+        border-radius: 50%;
+        width: 3rem;
+        color: #a7a7a7;
+        aspect-ratio: 1/1;
+        background-color: #121212;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.2rem;
+    color: white;
+    background-color: #121212;
+    border: none;
+    border-radius: 2.5rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    img {
+        background-color: #5e5e5e;
+        border-radius: 50%;
+        padding: 0.6rem;
+    }
+
+    .user {
+        font-size: 1.2rem;
+        font-weight: 600;
+
+        span {
+            padding: 0 1rem 0 1rem;
+        }
+    }
+
+}

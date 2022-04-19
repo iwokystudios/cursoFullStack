@@ -1,3 +1,23 @@
+Angular:
+- Estructura basica de proyectos y carpetas?
+- Cuando un nuevo modulo? pages? layout? 
+- Authenticacion? guards?
+- Spotify - con api - back en nodejs o directo un services a la api? 
+
+NodeJs 
+- Estructura basica 
+
+MySQL 
+- Estructuras basicas de base de datos -- Triggers, procedures, views?
+
+
+
+
+
+
+
+
+
 - ngOnInit what is?
 - subscribe - asyncrhonous?
 - private log ??
