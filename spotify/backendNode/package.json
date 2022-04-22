@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +13,7 @@
   "dependencies": {
     "express": "^4.17.3",
     "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
     "nodemon": "^2.0.15"
   }
 }
