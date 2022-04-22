@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { core } from '@angular/compiler';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,7 +16,8 @@ import { MainViewModule } from './main-view/main-view.module';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    MainViewModule
+    MainViewModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

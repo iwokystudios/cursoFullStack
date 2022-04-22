@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SpotifyService } from 'src/app/services/spotify.service';
+import { AlbumService } from 'src/app/services/albums.service';
+import { Album } from 'src/models/album';
 
 @Component({
   selector: 'app-app-home',
@@ -8,43 +9,51 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 })
 export class AppHomeComponent implements OnInit {
 
-  nuevaMusica: any[] = [];
-  nuevaPlaylists: any[] = [];
-  loading: boolean;
+  albums: Album[] = [];
 
-  error: boolean = false;
-  mensajeError?: string;
-  mensajeErrorPlaylist?: string;
+  // nuevaMusica: any[] = [];
+  // nuevaPlaylists: any[] = [];
+  // loading: boolean;
 
-  constructor(private spotify: SpotifyService) {
+  // error: boolean = false;
+  // mensajeError?: string;
+  // mensajeErrorPlaylist?: string;
 
-    this.loading = true;
-    this.spotify.getNewReleases()
-      .subscribe((data: any) => {
-        this.nuevaMusica = data
-        this.loading = false;
-      }, (errorServicio) => {
-        this.loading = false;
-        this.error = true;
-        this.mensajeError = errorServicio.error.error.message;
-        console.log(errorServicio);
-      });
+  constructor(private albumService: AlbumService) {
 
-    this.spotify.getFeaturedPlaylists()
-      .subscribe((data:any) => {
-        this.nuevaPlaylists = data
-        console.log(data)
-        this.loading = false;
-      }, (errorServicio) => {
-        this.loading = false;
-        this.error = true;
-        this.mensajeErrorPlaylist = errorServicio.error.error.message;
-        console.log(errorServicio);
-      });
+    // this.loading = true;
+    // this.spotify.getNewReleases()
+    //   .subscribe((data: any) => {
+    //     this.nuevaMusica = data
+    //     this.loading = false;
+    //   }, (errorServicio) => {
+    //     this.loading = false;
+    //     this.error = true;
+    //     this.mensajeError = errorServicio.error.error.message;
+    //     console.log(errorServicio);
+    //   });
+
+    // this.spotify.getFeaturedPlaylists()
+    //   .subscribe((data:any) => {
+    //     this.nuevaPlaylists = data
+    //     console.log(data)
+    //     this.loading = false;
+    //   }, (errorServicio) => {
+    //     this.loading = false;
+    //     this.error = true;
+    //     this.mensajeErrorPlaylist = errorServicio.error.error.message;
+    //     console.log(errorServicio);
+    //   });
 
    }
 
   ngOnInit(): void {
+    this.getAlbums();
+  }
+
+  getAlbums(): void {
+    this.albumService.getAlbums()
+      .subscribe(albums => this.albums = albums)
   }
 
 }
