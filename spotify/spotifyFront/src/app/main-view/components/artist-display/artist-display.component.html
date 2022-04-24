@@ -1,0 +1,20 @@
+<div class="title">
+    <img src="" alt="">
+    <div class="title-text">
+        <h2></h2>
+        <span *ngIf="artist.listening" class="listening">{{ artist.listening }} oyentes mensuales</span>
+    </div>
+</div>
+<div class="main-buttons">
+    <button class="btn-player"><img src="../../../../assets/images/play(1).png" alt=""></button>
+    <button class="follow">Seguir</button>
+</div>
+<div class="first-section">
+    <div class="populars">
+
+    </div>
+    <div class="suggested">
+
+    </div>
+</div>
+<app-card-display *ngFor="let collection of collections"></app-card-display>

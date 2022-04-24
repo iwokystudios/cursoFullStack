@@ -1,14 +1,14 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable, tap } from 'rxjs';
-import { Artists } from 'src/models/artist';
+import { catchError, Observable, of, tap } from 'rxjs';
+import { Artist } from 'src/models/artist';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ArtistService {
 
-  private playlistUrl = 'http://localhost:4000/api/artists';
+  private artistUrl = 'http://localhost:4000/api/artists';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -16,24 +16,29 @@ export class ArtistService {
 
   constructor(private http: HttpClient) { }
 
-  // Normal Playlist
+  // // Normal Playlist
 
-  // Popular new releases
-  getNewReleases(): Observable<Artists[]> {
-    return this.http.get<Artists[]>(this.playlistUrl)
-      .pipe(
-        tap( () => this.log('Fetched New releases')),
-        catchError(this.handleError<Artists[]>('getNewReleases', []))
-      );
-  };
+  // // Popular new releases
+  // getNewReleases(): Observable<Artists[]> {
+  //   return this.http.get<Artists[]>(this.playlistUrl)
+  //     .pipe(
+  //       tap( () => this.log('Fetched New releases')),
+  //       catchError(this.handleError<Artists[]>('getNewReleases', []))
+  //     );
+  // };
 
-  getPlaylist(id: number): Observable<Playlist[]> {
-    const url = `${this.playlistUrl/${id}}`
-    return this.http.get<Artists>(url)
-      .pipe(
-        tap( () => this.log('Fetched New releases')),
-        catchError(this.handleError<Artists[]>('getNewReleases', []))
-      );
+  // getPlaylist(id: number): Observable<Playlist[]> {
+  //   const url = `${this.playlistUrl/${id}}`
+  //   return this.http.get<Artists>(url)
+  //     .pipe(
+  //       tap( () => this.log('Fetched New releases')),
+  //       catchError(this.handleError<Artists[]>('getNewReleases', []))
+  //     );
+  // };
+
+  getArtist(id: number): Observable<Artist> {
+    const url = `${this.artistUrl}/${id}`;
+    return this.http.get<Artist>(url);
   };
 
 

@@ -59,15 +59,12 @@
         </div>
     </div>
 </section>
-<section class="content">
-    <div class="content-title">
-        <a href="" class="title">Tus programas</a>
-        <a href="" class="more">ver todo</a>
-    </div>
-    <div class="content-grid">
-        <app-card *ngFor="let album of albums"></app-card>
-    </div>
-</section>
+
+
+<app-card-display *ngFor="let collection of collections" [collection]="collection" class="content"></app-card-display>
+
+
+
 <section class="content">
     <div class="content-title">
         <a href="" class="title">Tus programas</a>

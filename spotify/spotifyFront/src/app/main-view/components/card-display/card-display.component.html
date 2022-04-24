@@ -1,0 +1,10 @@
+<div class="content-title">
+    <a routerLink="/collections/{{collection.id}}" class="title">{{ collection.name}}</a>
+    <a href="" class="more">ver todo</a>
+</div>
+<div class="content-grid">
+    <app-card *ngIf="albums" *ngFor="let album of albums" [album]="album" routerLink="/albums/{{album.id}}"></app-card>
+    <app-card *ngIf="artists" *ngFor="let artist of artists" [artist]="artist" routerLink="/artists/{{artist.id}}"></app-card>
+    <app-card *ngIf="playlists" *ngFor="let playlist of playlists" [playlist]="playlist" routerLink="/playlists/{{playlist.id}}"></app-card>
+    <app-card *ngIf="songs" *ngFor="let song of songs" [song]="song" routerLink="/songs/{{songs.id}}"></app-card>
+</div>

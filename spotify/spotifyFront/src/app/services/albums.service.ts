@@ -9,6 +9,7 @@ import { Album } from 'src/models/album';
 export class AlbumService {
 
   private albumsUrl = 'http://localhost:4000/api/albums';
+  private artistsUrl = 'http://localhost:4000/api/artists';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -26,6 +27,16 @@ export class AlbumService {
       //   catchError(this.handleError<Album[]>('getNewReleases', []))
       // );
   };
+
+  getAlbum(id: number): Observable<Album> {
+    const url = `${this.albumsUrl}/${id}`;
+    return this.http.get<Album>(url);
+  };
+
+  getAlbumsFromArtist(id: number): Observable<Album[]> {
+    const url = `${this.artistsUrl}/${id}/songs`;
+    return this.http.get<Album[]>(url);
+  }
 
 
 

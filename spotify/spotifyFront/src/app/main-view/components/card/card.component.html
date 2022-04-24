@@ -1,0 +1,43 @@
+<div *ngIf="album" class="content-card">
+    <div class="card-img-box">
+        <img [src]="album.album_img" alt="">
+        <button class="btn-player"><img src="../../../../assets/images/play(1).png" alt=""></button>
+    </div>
+    <div class="card-text">
+        <a href="">{{ album.album_name }}</a>
+        <p>{{ album.album_year }}</p>
+    </div>
+</div>
+
+<div *ngIf="artist" class="content-card">
+    <div class="card-img-box-artist">
+        <img [src]="artist.artist_profile_img" alt="">
+        <button class="btn-player"><img src="../../../../assets/images/play(1).png" alt=""></button>
+    </div>
+    <div class="card-text">
+        <a href="">{{ artist.artist_name }}</a>
+        <p>Artista</p>
+    </div>
+</div>
+
+<div *ngIf="playlist" class="content-card">
+    <div class="card-img-box">
+        <img [src]="playlist.playlist_img" alt="">
+        <button class="btn-player"><img src="../../../../assets/images/play(1).png" alt=""></button>
+    </div>
+    <div class="card-text">
+        <a href="">{{ playlist.playlist_name }}</a>
+        <p>{{ playlist.playlist_about }}</p>
+    </div>
+</div>
+
+<div *ngIf="song" class="content-card">
+    <div class="card-img-box">
+        <img [src]="song.song_img" alt="">
+        <button class="btn-player"><img src="../../../../assets/images/play(1).png" alt=""></button>
+    </div>
+    <div class="card-text">
+        <a href="">{{ song.song_name }}</a>
+        <p>{{ song.song_description }}</p>
+    </div>
+</div>

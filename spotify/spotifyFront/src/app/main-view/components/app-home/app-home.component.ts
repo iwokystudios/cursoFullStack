@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { AlbumService } from 'src/app/services/albums.service';
-import { Album } from 'src/models/album';
+import { Component, OnInit, Output } from '@angular/core';
+import { CollectionService } from 'src/app/services/collection.service';
+import { Collection } from 'src/models/collecion';
 
 @Component({
   selector: 'app-app-home',
@@ -9,7 +9,27 @@ import { Album } from 'src/models/album';
 })
 export class AppHomeComponent implements OnInit {
 
-  albums: Album[] = [];
+  @Output() collections: Collection[] = [];
+
+  constructor(private collectionService: CollectionService) {
+
+   }
+
+  ngOnInit(): void {
+    this.getHomeCollection(1);
+  }
+
+  getHomeCollection(user_id: number): void {
+    this.collectionService.getHomeCollection(user_id)
+      .subscribe(collections => this.collections = collections)
+  }
+
+}
+
+
+
+
+// Spotify API Video
 
   // nuevaMusica: any[] = [];
   // nuevaPlaylists: any[] = [];
@@ -19,7 +39,6 @@ export class AppHomeComponent implements OnInit {
   // mensajeError?: string;
   // mensajeErrorPlaylist?: string;
 
-  constructor(private albumService: AlbumService) {
 
     // this.loading = true;
     // this.spotify.getNewReleases()
@@ -44,18 +63,3 @@ export class AppHomeComponent implements OnInit {
     //     this.mensajeErrorPlaylist = errorServicio.error.error.message;
     //     console.log(errorServicio);
     //   });
-
-   }
-
-  ngOnInit(): void {
-    this.getAlbums();
-  }
-
-  getAlbums(): void {
-    this.albumService.getAlbums()
-      .subscribe(albums => this.albums = albums)
-  }
-
-}
-
-

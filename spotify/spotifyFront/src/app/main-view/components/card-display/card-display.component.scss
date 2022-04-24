@@ -1,0 +1,130 @@
+$mobile: 640px;
+$tablet: 768px;
+$desktop: 973px;
+$desktop-l:1160px;
+$large: 1300px;
+$xl-large: 1500px;
+
+@mixin mobile {
+    @media only screen and (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: $mobile) and (max-width: $tablet) {
+        @content;
+    }
+}
+@mixin desktop-xl {
+    @media only screen and (min-width: 0px) and (max-width: $desktop-l) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: $tablet) and (max-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media only screen and (min-width: $desktop) and (max-width: $large) {
+        @content;
+    }
+}
+
+@mixin xl-large {
+    @media only screen and (min-width: $large) and (max-width: $xl-large) {
+        @content;
+    }
+}
+
+.content-title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1.6rem;
+
+    .title {
+        margin: 0;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .more {
+        color: #a7a7a7;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2.4rem;
+    padding: 1rem 0 1.5rem;
+
+    @include mobile {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include desktop {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include large {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @include xl-large {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .content-card {
+        padding: 1.5rem;
+        background-color: #151515;
+        border-radius: 0.6rem;
+        &:hover {
+            background-color: #272727;
+            cursor: pointer;
+        }
+
+        .card-img-box {
+            border-radius: 0.4rem;
+            overflow: hidden;
+            width: 100%;
+            aspect-ratio: 1/1;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+            img {
+                width: 100%;
+            }
+
+            .btn-player {
+                position: relative;
+                top: -55%;
+                right: -65%;
+            }
+        }
+
+        .card-text {
+            padding: 2rem 0;
+            a {
+                color: #fff;
+                font-size: 1.6rem;
+                font-weight: 700;
+            }
+
+            p {
+                margin: 0.5rem 0;
+                line-height: 1.2;
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+        }
+    }
+}

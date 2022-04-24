@@ -1,24 +1,24 @@
-const db = require('../config');
+const connection = require('../config');
 
 const albumsCtrl = {};
 
 albumsCtrl.getAlbums = (req, res) => {
-    function insertCategory(connection) {
-        conn = connection;
-        conn.query('SELECT * FROM album', onInsertCategory);
-    }
-    function onInsertCategory(err, result) {
-        res.json({ err, result});
-        conn.release();
-    }
-    db.onConnect(res, insertCategory);
+    // function insertCategory(connection) {
+    //     conn = connection;
+    //     conn.query('SELECT * FROM album', onInsertCategory);
+    // }
+    // function onInsertCategory(err, result) {
+    //     res.json({ err, result});
+    //     conn.release();
+    // }
+    // db.onConnect(res, insertCategory);
 
-    // connection.connect();
-    // connection.query('SELECT * FROM album', function (error, results, fields) {
-    //     if (error) res.send(error);
-    //     res.json(results);
-    // });
-    // connection.end();
+    connection.connect();
+    connection.query('SELECT * FROM album', function (error, results, fields) {
+        if (error) res.send(error);
+        res.json(results);
+    });
+    connection.end();
 }
 
 
