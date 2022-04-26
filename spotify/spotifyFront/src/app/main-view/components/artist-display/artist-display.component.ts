@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ArtistService } from 'src/app/services/artists.service';
 import { Artist } from 'src/models/artist';
+import { Collection } from 'src/models/collecion';
 
 @Component({
   selector: 'app-artist-display',
@@ -11,6 +12,7 @@ import { Artist } from 'src/models/artist';
 export class ArtistDisplayComponent implements OnInit {
 
   @Input() artist?: Artist;
+  collections: Collection[] = [];
 
   constructor(
     private route: ActivatedRoute,

@@ -10,6 +10,7 @@ import { PlaylistDisplayComponent } from './components/playlist-display/playlist
 import { AlbumDisplayComponent } from './components/album-display/album-display.component';
 import { ArtistDisplayComponent } from './components/artist-display/artist-display.component';
 import { SongDisplayComponent } from './components/song-display/song-display.component';
+import { CardComponent } from './components/card/card.component';
 
 
 
@@ -22,7 +23,8 @@ import { SongDisplayComponent } from './components/song-display/song-display.com
     PlaylistDisplayComponent,
     AlbumDisplayComponent,
     ArtistDisplayComponent,
-    SongDisplayComponent
+    SongDisplayComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,

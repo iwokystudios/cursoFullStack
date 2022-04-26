@@ -12,13 +12,10 @@ albumsCtrl.getAlbums = (req, res) => {
     //     conn.release();
     // }
     // db.onConnect(res, insertCategory);
-
-    connection.connect();
     connection.query('SELECT * FROM album', function (error, results, fields) {
         if (error) res.send(error);
         res.json(results);
     });
-    connection.end();
 }
 
 
@@ -42,8 +39,21 @@ albumsCtrl.createAlbum = (req, res) => {
     // indicar artist & genre
 }
 albumsCtrl.getAlbum = (req, res) => {
-    // indicar id
-}
+    connection.query('SELECT * FROM album where id=?', [req.params.id], function (error, results, fields) {
+        if (error) {
+          res.json(error);
+        }
+        res.json(results);
+      });
+};
+albumsCtrl.getAlbumSongs = (req, res) => {
+    connection.query('SELECT * FROM song where album_id=?', [req.params.id], function (error, results, fields) {
+        if (error) {
+          res.json(error);
+        }
+        res.json(results);
+      });
+};
 albumsCtrl.editAlbum = (req, res) => {
     // indicar id
 }

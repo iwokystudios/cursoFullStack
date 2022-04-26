@@ -1,6 +1,7 @@
 const mysql = require('mysql');
 
 const pool = mysql.createConnection({
+  connectionLimit: 5,
   host: 'bafhkyezr13mtepp5fkm-mysql.services.clever-cloud.com',
   user: 'uhwtovctqitxzrjj',
   password: 'MTZ978OJooNNuM7yTE8V',

@@ -17,6 +17,7 @@ app.use("/api/genres", require('./routes/genres.routes'));
 app.use("/api/playlists", require('./routes/playlists.routes'));
 app.use("/api/songs", require('./routes/songs.routes'));
 app.use("/api/users", require('./routes/users.routes'));
+app.use("/api/collections", require('./routes/collections.routes'));
 
 
 
