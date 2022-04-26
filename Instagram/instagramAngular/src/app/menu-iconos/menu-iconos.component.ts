@@ -22,9 +22,12 @@ export class MenuIconosComponent implements OnInit {
   faArrowsRotate = faArrowsRotate
   faBookmark = faBookmark
   faCircleXmark = faCircleXmark
+
+  
   constructor() { }
 
   ngOnInit(): void {
+  
   }
 
 }

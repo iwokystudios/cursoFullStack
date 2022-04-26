@@ -1,10 +1,13 @@
 .nav__container{
     display: flex;
-    max-width: 100%;
-    max-height: 20px;
+    align-items: center;
+    width: 100%;
+    height: 60px;
     justify-content:space-around; 
+    border: 1px solid rgb(201, 197, 197);
     background-color: #fff ;
-    padding: 20px;
+    position: fixed;
+    z-index: 1000;
     img{
         width: 100px;
         height: 50%;
@@ -13,8 +16,12 @@
     
 }
 
-.histories, .posts{
+.interfaz{
     display: flex;
-    justify-content: center;
-    padding: 15px 10px;
+    align-items: center;
+    margin-top: 75px;
+    width: 100%;
+    min-width: 470;
+    gap: 15px;
+    flex-direction: column;
 }

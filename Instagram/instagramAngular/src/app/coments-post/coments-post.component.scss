@@ -1,0 +1,42 @@
+.comentarios__container{
+    width: 100%;
+    .section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        fa-icon{
+            font-size: 24px;
+            color: black;
+        }
+        .interaccion{
+            width: 20%;
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .interacción2{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 52%;
+        }
+    } 
+    .likepeople{
+        height: 30px;
+        font-weight: 500;   
+    } 
+    .comentario{
+        span{
+            font-weight: 500; 
+        }
+    }
+    .comentarios{
+        .cantidad{
+            color: grey;
+        }
+        span{
+            font-weight: 500; 
+        }
+    }
+}

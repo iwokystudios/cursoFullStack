@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: rgba(238, 229, 238, 0.959);}
+body {display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: rgba(238, 229, 238, 0.959);}
+
+.app{
+    width: 100%;
+}
 

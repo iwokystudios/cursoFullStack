@@ -19,6 +19,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuIconosComponent } from './menu-iconos/menu-iconos.component';
 import { BuscadorComponent } from './buscador/buscador.component';
 import { HistorieComponent } from './historie/historie.component';
+import { ImgPerfilComponent } from './img-perfil/img-perfil.component';
+import { TopPostComponent } from './top-post/top-post.component';
+import { FotoPostComponent } from './foto-post/foto-post.component';
+import { ComentsPostComponent } from './coments-post/coments-post.component';
+import { MenuPerfilComponent } from './menu-perfil/menu-perfil.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,12 @@ import { HistorieComponent } from './historie/historie.component';
     HintsComponent,
     MenuIconosComponent,
     BuscadorComponent,
-    HistorieComponent
+    HistorieComponent,
+    ImgPerfilComponent,
+    TopPostComponent,
+    FotoPostComponent,
+    ComentsPostComponent,
+    MenuPerfilComponent
   ],
   imports: [
     BrowserModule,

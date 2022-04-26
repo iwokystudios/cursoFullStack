@@ -1,48 +1,7 @@
 <div class="card">
+    <div class="top"><app-top-post></app-top-post></div>
 
-    <div class="header__container">
-        <div class="img">
-            <div class="arc">
-            <img src="https://www.hdwallpaper.nu/wp-content/uploads/2020/07/persona_4-7.png"/>
-            </div>
-        </div>
-        <div class="header">
-            <div class="header__links">
-                <a href="" class="perfil">Perfil</a><br>
-                <a href="" class="direccion">Barcelona</a>
-            </div>
-        </div>
-        <div class="button">
-            <fa-icon [icon]="faEllipsis"></fa-icon>
-        </div>
-        
-    </div>
+    <div class="fotos"><app-foto-post></app-foto-post></div>
 
-    <div class="fotos__container">
-        <div class="fotoActual">
-
-        </div>
-
-        <div class="section">
-            <fa-icon [icon]="faHeart"></fa-icon>
-            <fa-icon [icon]="faComment"></fa-icon>
-            <fa-icon [icon]="faPaperPlane"></fa-icon>
-            <fa-icon [icon]="faEllipsis"></fa-icon>
-            <fa-icon [icon]="faBookmark"></fa-icon>
-        </div>
-    </div>
-
-    <div class="comentarios__container">
-        <div class="likepeople">
-            <p>Les gusta a toda esta gente.</p>
-        </div>
-        <div class="comentario">
-            <span>Perfil</span><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatem similique.</p>
-        </div>
-        <div class="comentarios">
-            <p>ver los sopotocientos comentarios.</p>
-            <span>Perfil2</span><p>Lorem</p>
-            <span>Perfil3</span><p>Lorem ipsum dolor sit amet consectetur.</p>
-        </div>
-    </div>
+    <div class="interaction"><app-coments-post></app-coments-post></div>
 </div>
