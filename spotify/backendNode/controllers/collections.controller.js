@@ -24,8 +24,9 @@ collectionsCtrl.getCollection = (req, res) => {
 collectionsCtrl.getCollectionPlaylists = (req, res) => {
     // indicar id
     connection.query(
-        'SELECT * FROM collection where id=?;SELECT * FROM playlist INNER JOIN collection_playlist ON collection_playlist.id_playlist = playlist.id WHERE collection_playlist.id_collection=?',
-        [req.params.id, req.params.id],
+        // SELECT * FROM collection where id=?;
+        'SELECT * FROM playlist INNER JOIN collection_playlist ON collection_playlist.id_playlist = playlist.id WHERE collection_playlist.id_collection=?',
+        [req.params.id],
         function (error, results, fields) {
             if (error) {
             res.json(error);

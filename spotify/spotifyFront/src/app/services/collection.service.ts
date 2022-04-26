@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, tap, of } from 'rxjs';
 import { Collection } from 'src/models/collecion';
+import { Playlist } from 'src/models/playlist';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +28,14 @@ export class CollectionService {
       //   tap( () => this.log('Fetched New releases')),
       //   catchError(this.handleError<Album[]>('getNewReleases', []))
       // );
+  };
+
+  getCollections(): Observable<Collection[]> {
+    return this.http.get<Collection[]>(this.collectionsUrl)
+  };
+
+  getCollectionPlaylists(id: number): Observable<Playlist[]> {
+    return this.http.get<Playlist[]>(`${this.collectionsUrl}/${id}/playlists`)
   };
 
       /**

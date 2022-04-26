@@ -20,6 +20,10 @@ export class SongService {
     return this.http.get<Song>(url);
   };
 
+  getSongs(): Observable<Song[]> {
+    return this.http.get<Song[]>(this.songsUrl);
+  };
+
   getSongsFromAlbum(id: number): Observable<Song[]> {
     const url = `${this.albumsUrl}/${id}/songs`;
     return this.http.get<Song[]>(url);

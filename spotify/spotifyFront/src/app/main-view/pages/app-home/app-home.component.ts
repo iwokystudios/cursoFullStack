@@ -1,4 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { CollectionService } from 'src/app/services/collection.service';
 import { Collection } from 'src/models/collecion';
 
@@ -16,11 +17,17 @@ export class AppHomeComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.getHomeCollection(1);
+    // this.getHomeCollection(1);
+    this.getCollections();
   }
 
   getHomeCollection(user_id: number): void {
     this.collectionService.getHomeCollection(user_id)
+      .subscribe(collections => this.collections = collections)
+  }
+
+  getCollections(): void {
+    this.collectionService.getCollections()
       .subscribe(collections => this.collections = collections)
   }
 

@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, Observable, tap } from 'rxjs';
+import { catchError, Observable, of, tap } from 'rxjs';
 import { Playlist } from 'src/models/playlist';
 
 @Injectable({
@@ -31,7 +31,15 @@ export class PlaylistService {
     const url = `${this.playlistUrl}/${id}`
     return this.http.get<Playlist>(url)
       .pipe(
-        tap( () => this.log('Fetched New releases')),
+        tap( () => this.log('Fetched Playlist')),
+        catchError(this.handleError<Playlist>('getNewReleases'))
+      );
+  };
+
+  getPlaylists(): Observable<Playlist[]> {
+    return this.http.get<Playlist[]>(this.playlistUrl)
+      .pipe(
+        tap( () => this.log('Fetched Playlists')),
         catchError(this.handleError<Playlist[]>('getNewReleases', []))
       );
   };
@@ -80,7 +88,7 @@ export class PlaylistService {
   };
 
   private log(message: string) {
-    console.log(`HeroService: ${message}`);
+    console.log(`PlaylistService: ${message}`);
   };
 
 

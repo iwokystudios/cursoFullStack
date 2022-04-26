@@ -1,0 +1,30 @@
+<!-- <div *ngIf="playlist" class="title">
+    <img [src]="playlist.playlist_img" alt="">
+    <div class="title-text">
+        <h2>{{ playlist.playlist_name }}</h2>
+        <span  class="listening"> oyentes mensuales</span>
+    </div>
+</div> -->
+
+<div *ngIf="(playlist$ | async)" class="title">
+    <img [src]="(playlist$ | async)?.playlist_img" alt="">
+    <div class="title-text">
+        <h2>{{ (playlist$ | async)?.playlist_name }}</h2>
+        <!-- *ngIf="artist.listening" -->
+        <!-- <span  class="listening">{{ artist.listening }} oyentes mensuales</span> -->
+    </div>
+</div>
+
+<div class="main-buttons">
+    <button class="btn-player"><img src="../../../../assets/images/play(1).png" alt=""></button>
+    <button class="follow">Seguir</button>
+</div>
+<div class="first-section">
+    <div class="populars">
+
+    </div>
+    <div class="suggested">
+
+    </div>
+</div>
+<!-- <app-card-display *ngFor="let collection of collections"></app-card-display> -->

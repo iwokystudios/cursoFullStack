@@ -6,4 +6,5 @@ export interface Song {
     song_description: string;
     song_length: number;
     song_url: string;
+    song_img: string;
 }

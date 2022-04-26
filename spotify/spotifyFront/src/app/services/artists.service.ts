@@ -41,6 +41,10 @@ export class ArtistService {
     return this.http.get<Artist>(url);
   };
 
+  getArtists(): Observable<Artist[]> {
+    return this.http.get<Artist[]>(this.artistUrl);
+  };
+
 
 
     /**
