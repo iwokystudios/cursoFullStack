@@ -15,4 +15,12 @@ export class TableRowComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  deleteClient() {
+
+  }
+
+  modifyClient() {
+    
+  }
+
 }

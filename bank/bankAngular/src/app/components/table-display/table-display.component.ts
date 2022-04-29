@@ -15,4 +15,5 @@ export class TableDisplayComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  newClient() {};
 }

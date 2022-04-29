@@ -2,5 +2,11 @@
     <h2>{{ client.usuario }}</h2>
     <span>{{ client.correo }}</span>
     <span>{{ client.saldo }}</span>
-    <app-button-send (onPressMyButton)="onPressButton()" text="Delete"></app-button-send>
+    <div class="row-controllers">
+        <app-button-send (onPressMyButton)="deleteClient()" text="Delete"></app-button-send>
+        <app-button-send (onPressMyButton)="modifyClient()" text="Modify"></app-button-send>
+        <app-button-send (onPressMyButton)="deleteClient()" text="Update"></app-button-send>
+    </div>
+
+    
 </div>

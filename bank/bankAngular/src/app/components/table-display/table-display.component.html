@@ -1,1 +1,5 @@
+<div class="table-header">
+    <app-button-send (onPressMyButton)="newClient()" text="Insert"></app-button-send>
+</div>
+
 <app-table-row *ngFor="let client of clients" [client]="client"></app-table-row>
