@@ -15,6 +15,9 @@ import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { CardDisplayComponent } from './components/card-display/card-display.component';
 import { CardComponent } from './components/card/card.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { LoanComponent } from './pages/loan/loan.component';
+import { MessageComponent } from './pages/message/message.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { CardComponent } from './components/card/card.component';
     MainMenuComponent,
     SidebarComponent,
     CardDisplayComponent,
-    CardComponent
+    CardComponent,
+    SearchBarComponent,
+    LoanComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,

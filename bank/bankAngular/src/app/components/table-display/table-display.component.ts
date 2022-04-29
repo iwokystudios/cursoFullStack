@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Client } from 'src/models/client';
 
 @Component({
   selector: 'app-table-display',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table-display.component.scss']
 })
 export class TableDisplayComponent implements OnInit {
+
+  @Input() clients?: Client[];
 
   constructor() { }
 

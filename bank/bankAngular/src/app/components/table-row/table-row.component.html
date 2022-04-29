@@ -1,1 +1,6 @@
-<p>table-row works!</p>
+<div *ngIf="client">
+    <h2>{{ client.usuario }}</h2>
+    <span>{{ client.correo }}</span>
+    <span>{{ client.saldo }}</span>
+    <app-button-send (onPressMyButton)="onPressButton()" text="Delete"></app-button-send>
+</div>
