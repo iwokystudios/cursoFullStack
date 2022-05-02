@@ -1,1 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+        /* Created with https://www.css-gradient.com */
+        background: #17B0B9;
+        background: -webkit-linear-gradient(top left, #17B0B9, #BCEDFF);
+        background: -moz-linear-gradient(top left, #17B0B9, #BCEDFF);
+        background: linear-gradient(to bottom right, #17B0B9, #BCEDFF);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+    margin: 2.5rem 0 0.5rem;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+    letter-spacing: -2px;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.8rem;
+    max-width: 70ch;
+    margin: 1rem 0;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    font-size: 1.8rem;
+    color: inherit;
+    text-decoration: none;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+.btn {
+    border: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.6rem;
+    border-radius: 0.5vh;
+    margin: 1rem 0 0 0;
+    align-self: flex-start;
+}
+
+app-root {
+    border-radius: 0.8rem;
+    width: 98%;
+    min-height: 95vh;
+    margin: 2rem auto;
+
+
+
+    display: block;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 25rem auto;
+    grid-template-rows: 6.5rem auto;
+}

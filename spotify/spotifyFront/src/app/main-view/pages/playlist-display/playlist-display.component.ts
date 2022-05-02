@@ -12,8 +12,8 @@ import { Observable } from 'rxjs';
 
 export class PlaylistDisplayComponent implements OnInit {
 
-  // playlist?: Playlist;
-  playlist$!: Observable<Playlist>;
+  playlist?: Playlist;
+  // playlist$!: Observable<Playlist>;
 
   constructor(
     private route: ActivatedRoute,
@@ -21,17 +21,17 @@ export class PlaylistDisplayComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // this.getPlaylist();
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.playlist$ = this.playlistService.getPlaylist(id)
+    this.getPlaylist();
+    // const id = Number(this.route.snapshot.paramMap.get('id'));
+    // this.playlist$ = this.playlistService.getPlaylist(id);
   }
 
-  // getPlaylist(): void {
-  //   const id = Number(this.route.snapshot.paramMap.get('id'));
-  //   this.playlistService.getPlaylist(id)
-  //     .subscribe(playlist => this.playlist = playlist)
+  getPlaylist(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.playlistService.getPlaylist(id)
+      .subscribe(playlist => this.playlist = playlist[0])
     
-  // }
+  }
 
 
 }

@@ -1,0 +1,64 @@
+.playlist-display {
+    display: grid;
+    grid-template-rows: 34rem auto;
+    // margin-top: 6.5rem;
+    // padding: 0 3rem 6rem;
+    // gap: 2.4rem;
+
+    .title {
+        grid-row: 1;
+        background-color: #3a3a3a;
+        display: flex;
+        padding: 8.5rem 3rem 2.4rem;
+        gap: 2.4rem;
+        align-items:flex-end;
+
+        .section-img {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            width: 20rem;
+            height: 20rem;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .title-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .type-of-list {
+                font-size: 1.2rem;
+                color: white;
+                font-weight: 600;
+            }
+
+            h2 {
+                font-size: 9rem;
+                color: white;
+                margin: 0;
+            }
+
+            .subtitle {
+                display: flex;
+                gap: 1rem;
+                color: white;
+                font-weight: 500;
+
+                .user-owner {
+                    font-size: 1.4rem;
+                }
+
+                .listening {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+
+    app-table-display {
+        padding: 2.4rem 3rem 6rem;
+    }
+}

@@ -1,0 +1,86 @@
+.table-display {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    .main-buttons {
+        display: flex;
+        gap: 2.4rem;
+
+        .follow {
+            padding: 1rem 2rem;
+            font-size: 1.3rem;
+            background: none;
+            color: #a7a7a7;
+            font-weight: 500;
+            border-radius: 0.5rem;
+            border: 0.1rem solid #a7a7a7;
+        }
+    }
+
+    .table {
+        .table-header {
+            display: grid;
+            grid-template-columns: 5rem 1.5fr 1fr 1fr 5rem;
+            font-weight: 500;
+            border-bottom: 0.1rem solid rgba(189, 189, 189, 0.3);
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
+
+            span {
+                font-size: 1.3rem;
+            }
+        }
+
+        .song-row {
+            display: grid;
+            grid-template-columns: 5rem 1.5fr 1fr 1fr 5rem;
+            padding: 1rem 2rem;
+
+            &:hover {
+                background-color: #272727;
+                cursor: pointer;
+                border-radius: 0.5rem;
+            }
+            
+            .number {
+                font-size: 1.6rem;
+                font-weight: 500;
+            }
+
+            .song {
+                display: flex;
+                gap: 1.2rem;
+
+                
+                .song-img {
+                    width: 4rem;
+                    aspect-ratio: 1/1;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        top: 0;
+                    }
+                }
+                .song-description {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+
+                    .title {
+                        font-size: 1.4rem;
+                        color: white;
+                    }
+                }
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                font-size: 1.3rem;
+                font-weight: 400;
+            }
+        }
+    }
+}

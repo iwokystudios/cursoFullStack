@@ -1,30 +1,30 @@
-<!-- <div *ngIf="playlist" class="title">
-    <img [src]="playlist.playlist_img" alt="">
-    <div class="title-text">
-        <h2>{{ playlist.playlist_name }}</h2>
-        <span  class="listening"> oyentes mensuales</span>
+<div *ngIf="playlist" class="playlist-display">
+    <div class="title">
+        <div class="section-img">
+            <img [src]="playlist.playlist_img" alt="">
+        </div>
+        <div class="title-text">
+            <span class="type-of-list">LISTA</span>
+            <h2>{{ playlist.playlist_name }}</h2>
+            <div class="subtitle">
+                <span class="user-owner">{{ playlist.playlist_owner }}</span>
+                <span  class="listening"> 13.888 oyentes mensuales</span>
+            </div>
+        </div>
     </div>
-</div> -->
+    
+    <!-- <div *ngIf="playlist$ | async" class="title">
+        <img [src]="(playlist$ | async)!.playlist_img" alt="">
+        <div class="title-text">
+            <h2>{{ (playlist$ | async)?.playlist_name }}</h2>
+            <span  class="listening"> oyentes mensuales</span>
+        </div>
+    </div> -->
+    
 
-<div *ngIf="(playlist$ | async)" class="title">
-    <img [src]="(playlist$ | async)?.playlist_img" alt="">
-    <div class="title-text">
-        <h2>{{ (playlist$ | async)?.playlist_name }}</h2>
-        <!-- *ngIf="artist.listening" -->
-        <!-- <span  class="listening">{{ artist.listening }} oyentes mensuales</span> -->
-    </div>
+    
+    <!-- <app-card-display *ngFor="let collection of collections"></app-card-display> -->
+    
+    <app-table-display [playlist]="playlist"></app-table-display>
 </div>
 
-<div class="main-buttons">
-    <button class="btn-player"><img src="../../../../assets/images/play(1).png" alt=""></button>
-    <button class="follow">Seguir</button>
-</div>
-<div class="first-section">
-    <div class="populars">
-
-    </div>
-    <div class="suggested">
-
-    </div>
-</div>
-<!-- <app-card-display *ngFor="let collection of collections"></app-card-display> -->

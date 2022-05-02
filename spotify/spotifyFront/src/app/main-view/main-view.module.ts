@@ -11,6 +11,8 @@ import { AlbumDisplayComponent } from './pages/album-display/album-display.compo
 import { ArtistDisplayComponent } from './pages/artist-display/artist-display.component';
 import { SongDisplayComponent } from './pages/song-display/song-display.component';
 import { CardComponent } from './components/card/card.component';
+import { TableDisplayComponent } from './components/table-display/table-display.component';
+import { TableRowComponent } from './components/table-row/table-row.component';
 
 
 
@@ -24,7 +26,9 @@ import { CardComponent } from './components/card/card.component';
     AlbumDisplayComponent,
     ArtistDisplayComponent,
     SongDisplayComponent,
-    CardComponent
+    CardComponent,
+    TableDisplayComponent,
+    TableRowComponent
   ],
   imports: [
     CommonModule,

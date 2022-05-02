@@ -1,0 +1,31 @@
+<div class="table-display">
+    <div class="main-buttons">
+        <button class="btn-player"><img src="../../../../assets/images/play(1).png" alt=""></button>
+        <button class="follow">Seguir</button>
+    </div>
+    
+    <div *ngIf="playlist" class="table">
+        <div class="table-header">
+            <span class="number">#</span>
+            <span class="title">TÍTULO</span>
+            <span class="album">ÁLBUM</span>
+            <span class="date">FECHA INCORPORACIÓN</span>
+            <span class="duration">O</span>
+        </div>
+        <div *ngFor="let song of songs" class="song-row">
+            <span class="number">1</span>
+            <span class="song">
+                <span class="song-img"><img src="../../../../assets/images/disc01.png" alt=""></span>
+                <span class="song-description">
+                    <span class="title">{{ song.song_name }}</span>
+                    <span class="artists">{{ song.artist_id }}</span>                    
+                </span>
+            </span>
+            <span class="album">{{ song.album_id }}</span>
+            <span class="date">25 de jul 2020</span>
+            <span class="duration">{{ song.song_length }}</span>
+        </div>
+    </div>
+</div>
+
+

@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, of, tap } from 'rxjs';
 import { Playlist } from 'src/models/playlist';
+import { Song } from 'src/models/song';
 
 @Injectable({
   providedIn: 'root'
@@ -27,12 +28,21 @@ export class PlaylistService {
       );
   };
 
-  getPlaylist(id: number): Observable<Playlist> {
+  getPlaylist(id: number): Observable<Playlist[]> {
     const url = `${this.playlistUrl}/${id}`
-    return this.http.get<Playlist>(url)
+    return this.http.get<Playlist[]>(url)
       .pipe(
         tap( () => this.log('Fetched Playlist')),
-        catchError(this.handleError<Playlist>('getNewReleases'))
+        catchError(this.handleError<Playlist[]>('getNewReleases'))
+      );
+  };
+
+  getPlaylistSongs(id: number): Observable<[Playlist[],Song[]]> {
+    const url = `${this.playlistUrl}/${id}/songs`
+    return this.http.get<[Playlist[],Song[]]>(url)
+      .pipe(
+        tap( () => this.log('Fetched Playlist')),
+        catchError(this.handleError<[Playlist[],Song[]]>('getNewReleases'))
       );
   };
 

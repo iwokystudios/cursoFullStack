@@ -1,0 +1,16 @@
+.table-display {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 5rem auto;
+    gap: 2.4rem;
+
+    .table-header {
+        border-bottom: 0.2rem solid #e2e2e2;
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+            margin: 0;
+        }
+    }
+}

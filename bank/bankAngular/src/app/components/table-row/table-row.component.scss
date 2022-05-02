@@ -1,0 +1,17 @@
+.row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    padding: 1.2em 0;
+
+    &:hover {
+        border-radius: 0.5rem;
+        background-color: rgba(216, 216, 216, 0.5);
+    }
+
+    h3 {
+        margin: 0;
+    }
+}

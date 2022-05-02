@@ -11,7 +11,7 @@ import { PlayingBarComponent } from './components/playing-bar/playing-bar.compon
     PlayingBarComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
     MenuComponent,
