@@ -18,6 +18,8 @@ import { CardComponent } from './components/card/card.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { LoanComponent } from './pages/loan/loan.component';
 import { MessageComponent } from './pages/message/message.component';
+import { FormClientComponent } from './components/form-client/form-client.component';
+import { ModifyComponent } from './pages/modify/modify.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { MessageComponent } from './pages/message/message.component';
     CardComponent,
     SearchBarComponent,
     LoanComponent,
-    MessageComponent
+    MessageComponent,
+    FormClientComponent,
+    ModifyComponent
   ],
   imports: [
     BrowserModule,

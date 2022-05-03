@@ -1,0 +1,16 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    input {
+        padding: 1.4rem 1.2rem;
+        width: 50%;
+        background-color: #e1e0e0;
+        border: none;
+        border-top: 0.2rem solid #d3d3d3;
+        outline: none;
+        border-radius: 0.5rem;
+        font-size: 1.4rem;
+    }
+}

@@ -1,10 +1,10 @@
-.table-display {
+.modify-client {
     width: 100%;
     display: grid;
     grid-template-rows: 15vh auto;
     gap: 2.4rem;
 
-    .table-header {
+    .section-title {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -20,10 +20,10 @@
         }
     }
 
-    .list {
+    .form {
         border-radius: 0.5rem;
         background-color: white;
         border: 0.1rem solid #dedede ;
-        
+        padding: 2.4rem;
     }
 }

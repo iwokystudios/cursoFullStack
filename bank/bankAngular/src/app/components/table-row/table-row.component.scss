@@ -4,7 +4,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
     text-align: center;
-    padding: 1.2em 0;
+    padding: 1.2em 0;    
+    border-bottom: 0.1rem solid #dedede ;
 
     &:hover {
         border-radius: 0.5rem;

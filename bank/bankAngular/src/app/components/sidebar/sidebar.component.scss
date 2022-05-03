@@ -38,9 +38,12 @@
             font-size: 1.6rem;
             font-weight: 700;
             color: #7a7a7a;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
 
             &:hover {
-                color: rgb(2, 158, 163);
+                color: #029ea3;
             }
         }
     }

@@ -8,6 +8,14 @@
         font-weight: 700;
         font-size: 1.6rem;
         color: #7a7a7a;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        img {
+            flex-shrink: 0;
+            height: 1.6rem;
+        }
 
         &:hover {
             color: rgb(2, 158, 163);

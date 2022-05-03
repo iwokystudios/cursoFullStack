@@ -3,6 +3,8 @@
         <h2>Clients</h2>
         <app-button-send (onPressMyButton)="newClient()" text="Insert"></app-button-send>
     </div>
-
-    <app-table-row *ngFor="let client of clients" [client]="client"></app-table-row>
+    <div class="list">
+       <app-table-row *ngFor="let client of clients" [client]="client"></app-table-row> 
+    </div>
+    
 </div>
