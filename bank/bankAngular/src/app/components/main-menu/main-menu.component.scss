@@ -1,10 +1,16 @@
 .main-menu {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
 
     a {
-        border-bottom: 0.1rem solid #fff;
         padding: 0.5rem 0;
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: #7a7a7a;
+
+        &:hover {
+            color: rgb(2, 158, 163);
+        }
     }
 }

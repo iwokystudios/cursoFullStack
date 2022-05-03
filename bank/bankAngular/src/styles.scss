@@ -2,7 +2,7 @@
 
 * {
     font-size: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     line-height: 1.5;
     box-sizing: border-box;
     padding: 0;
@@ -14,15 +14,23 @@ body {
     width: 100%;
     min-height: 100vh;
 
-        /* Created with https://www.css-gradient.com */
-        background: #17B0B9;
-        background: -webkit-linear-gradient(top left, #17B0B9, #BCEDFF);
-        background: -moz-linear-gradient(top left, #17B0B9, #BCEDFF);
-        background: linear-gradient(to bottom right, #17B0B9, #BCEDFF);
+        // /* Created with https://www.css-gradient.com */
+        // background: #17B0B9;
+        // background: -webkit-linear-gradient(top left, #17B0B9, #BCEDFF);
+        // background: -moz-linear-gradient(top left, #17B0B9, #BCEDFF);
+        // background: linear-gradient(to bottom right, #17B0B9, #BCEDFF);
+
+        // background-color: #ecf1fa;
+
+        background-image: -moz-linear-gradient(45deg, rgb(199, 255, 249), rgb(167, 153, 255));
+
+background-image: -webkit-linear-gradient(45deg, rgb(199, 255, 249), rgb(167, 153, 255));
+
+background-image: linear-gradient(45deg, rgb(199, 255, 249), rgb(167, 153, 255)); 
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     line-height: 1.2;
     margin: 2.5rem 0 0.5rem;
     font-weight: 900;
@@ -68,17 +76,19 @@ img {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.6rem;
-    border-radius: 0.5vh;
-    margin: 1rem 0 0 0;
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
+    margin: 0;
     align-self: flex-start;
+    background-color: rgb(2, 158, 163);
+    color: white;
 }
 
 app-root {
-    border-radius: 0.8rem;
-    width: 98%;
-    min-height: 95vh;
-    margin: 2rem auto;
+    border-radius: 1.5rem;
+    width: 90%;
+    min-height: 90vh;
+    margin: 5vh auto;
 
 
 
@@ -87,4 +97,6 @@ app-root {
     display: grid;
     grid-template-columns: 25rem auto;
     grid-template-rows: 6.5rem auto;
+    // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

@@ -8,9 +8,12 @@
         border-bottom: 0.2rem solid #e2e2e2;
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         h2 {
             margin: 0;
+            font-weight: 700;
+            width: 30%;
         }
     }
 }

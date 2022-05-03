@@ -11,7 +11,16 @@
         background-color: rgba(216, 216, 216, 0.5);
     }
 
-    h3 {
-        margin: 0;
+    span {
+        font-size: 1.6rem;
+    }
+
+    .name {
+        font-weight: 700;
+    }
+
+    .row-controllers {
+        display: flex;
+        gap: 0.5rem;
     }
 }
