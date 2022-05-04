@@ -18,5 +18,8 @@ export class AppTopMenuComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+  goForward(): void {
+    this.location.forward();
+  }
 
 }

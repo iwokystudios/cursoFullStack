@@ -63,21 +63,25 @@
     padding-bottom: 2rem;
 
     li {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 0.6rem 2rem;
-        font-size: 1.3rem;
-        font-weight: 500;
-        cursor: default ;
 
-        &:hover {
-            color: #fff;
-        }
+        a {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0.6rem 2rem;
+            font-size: 1.3rem;
+            font-weight: 500;
+            cursor: default ;
 
-        img {
-            margin: 0 1.5rem 0 0;
+            &:hover {
+                color: #fff;
+            }
+
+            img {
+                margin: 0 1.5rem 0 0;
+            }  
         }
+        
     } 
     
     // .shadow {

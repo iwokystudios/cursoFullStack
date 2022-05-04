@@ -23,7 +23,7 @@
 <div *ngIf="playlist" class="content-card">
     <div class="card-img-box">
         <img [src]="playlist.playlist_img" alt="">
-        <button class="btn-player"><img src="../../../../assets/images/play(1).png" alt=""></button>
+        <app-play-button></app-play-button>
     </div>
     <div class="card-text">
         <a href="">{{ playlist.playlist_name }}</a>

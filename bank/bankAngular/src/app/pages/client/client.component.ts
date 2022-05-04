@@ -1,4 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Client } from 'src/models/client';
 import { ClientService } from 'src/services/client.service';
 
@@ -9,16 +11,18 @@ import { ClientService } from 'src/services/client.service';
 })
 export class ClientComponent implements OnInit {
 
-  @Output() clients: Client[] = [];
+  client?: Observable<Client>;
 
-  constructor(private clientService: ClientService) { }
+  constructor(private clientService: ClientService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getClients();
+    this.getClient();
   }
 
-  getClients(): void {
-    this.clients = this.clientService.getClients();
+  getClient(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.client = this.clientService.getClient(id);
+    console.log(this.client)
   }
 
 }

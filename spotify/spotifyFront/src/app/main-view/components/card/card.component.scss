@@ -18,10 +18,14 @@
             width: 100%;
         }
 
-        .btn-player {
+        app-play-button {
+            z-index: 1;
+            
+            .btn-player {
             position: relative;
             top: -55%;
             right: -65%;
+            }
         }
     }
 
@@ -56,6 +60,11 @@
             line-height: 1.2;
             font-size: 1.2rem;
             font-weight: 500;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1; /* number of lines to show */
+            -webkit-box-orient: vertical;
         }
     }
 }

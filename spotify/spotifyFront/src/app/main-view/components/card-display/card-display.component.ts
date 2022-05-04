@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { CollectionService } from 'src/app/services/collection.service';
 import { Collection } from 'src/models/collecion';
@@ -17,12 +18,17 @@ export class CardDisplayComponent implements OnInit {
 
   constructor(
     private collectionService: CollectionService,
+    private router: Router,
     ) {}
 
   ngOnInit(): void {
     // this.getCollectionPlaylists();
     const id = this.collection!.id;
     this.playlists$ = this.collectionService.getCollectionPlaylists(id);
+  }
+
+  seeAll(id: number) {
+    this.router.navigate(["/collections/" + id]);
   }
 
   // getCollectionPlaylists(): Observable<Playlist[]> {

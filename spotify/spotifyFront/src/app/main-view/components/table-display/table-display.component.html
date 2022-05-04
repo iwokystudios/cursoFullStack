@@ -1,6 +1,6 @@
 <div class="table-display">
     <div class="main-buttons">
-        <button class="btn-player"><img src="../../../../assets/images/play(1).png" alt=""></button>
+        <app-play-button></app-play-button>
         <button class="follow">Seguir</button>
     </div>
     
@@ -12,8 +12,8 @@
             <span class="date">FECHA INCORPORACIÓN</span>
             <span class="duration">O</span>
         </div>
-        <div *ngFor="let song of songs" class="song-row">
-            <span class="number">1</span>
+        <div *ngFor="let song of songs; let i = index" class="song-row">
+            <span class="number">{{i + 1}}</span>
             <span class="song">
                 <span class="song-img"><img src="../../../../assets/images/disc01.png" alt=""></span>
                 <span class="song-description">

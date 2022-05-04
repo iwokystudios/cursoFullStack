@@ -1,6 +1,6 @@
 <div *ngIf="collection" class="content-title">
     <a routerLink="/collections/{{ collection.id }}" class="title">{{ collection.title }}</a>
-    <a href="" class="more">ver todo</a>
+    <a routerLink="/collections/{{ collection.id }}" class="more">ver todo</a>
 </div>
 <div class="content-grid">
     <app-card *ngFor="let playlist of playlists$ | async" [playlist]="playlist" routerLink="/playlists/{{playlist.id}}"></app-card>

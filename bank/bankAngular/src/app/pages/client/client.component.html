@@ -1,1 +1,7 @@
-<app-table-display [clients]="clients"></app-table-display>
+<div *ngIf="client" class="client">
+    <app-section-title [title]="(client | async)?.usuario"></app-section-title>
+    <form action="">
+        <input type="text">
+    </form>
+    {{(client | async)?.password}}
+</div>

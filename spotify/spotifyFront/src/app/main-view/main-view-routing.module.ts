@@ -6,6 +6,7 @@ import { SongDisplayComponent } from './pages/song-display/song-display.componen
 import { AlbumDisplayComponent } from './pages/album-display/album-display.component';
 import { ArtistDisplayComponent } from './pages/artist-display/artist-display.component';
 import { PlaylistDisplayComponent } from './pages/playlist-display/playlist-display.component';
+import { CollectionDisplayComponent } from './pages/collection-display/collection-display.component';
 // import { AuthGuard } from '../services/auth.guard';
 
 const routes: Routes = [
@@ -15,7 +16,7 @@ const routes: Routes = [
   { path: 'albums/:id' , component: AlbumDisplayComponent },
   { path: 'artists/:id' , component: ArtistDisplayComponent },
   { path: 'playlists/:id' , component: PlaylistDisplayComponent },
-  { path: 'collections/:id' , component: PlaylistDisplayComponent }
+  { path: 'collections/:id' , component: CollectionDisplayComponent }
 ]
 
 

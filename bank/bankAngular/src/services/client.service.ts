@@ -10,8 +10,9 @@ export class ClientService {
   constructor() { }
 
   getClient(id:number): any {
-    const client = CLIENTS.filter(client => client.id == id)
-    return client;
+    var client = CLIENTS.filter(client => client.id == id)
+    const cliente = client[0];
+    return cliente;
   };
   getClients(): Client[] {
     return CLIENTS;

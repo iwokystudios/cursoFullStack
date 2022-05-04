@@ -3,7 +3,7 @@
     <span class="email">{{ client.correo }}</span>
     <span class="money">{{ client.saldo }}</span>
     <div class="row-controllers">
-        <app-button-send (onPressMyButton)="modifyClient()" text="Modify" routerLink="/modify"></app-button-send>
+        <app-button-send (onPressMyButton)="modifyClient(client.id)" text="Modify"></app-button-send>
         <app-button-send (onPressMyButton)="deleteClient()" text="Delete"></app-button-send>
     </div>
 

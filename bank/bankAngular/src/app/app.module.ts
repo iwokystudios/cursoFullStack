@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ClientComponent } from './pages/client/client.component';
 import { ManagerComponent } from './pages/manager/manager.component';
-import { TransferComponent } from './pages/transfer/transfer.component';
 import { ButtonSendComponent } from './components/button-send/button-send.component';
 import { FormComponent } from './components/form/form.component';
 import { TableDisplayComponent } from './components/table-display/table-display.component';
@@ -20,6 +19,13 @@ import { LoanComponent } from './pages/loan/loan.component';
 import { MessageComponent } from './pages/message/message.component';
 import { FormClientComponent } from './components/form-client/form-client.component';
 import { ModifyComponent } from './pages/modify/modify.component';
+import { ClientsComponent } from './pages/clients/clients.component';
+import { LoansComponent } from './pages/loans/loans.component';
+import { ManagersComponent } from './pages/managers/managers.component';
+import { MessagesComponent } from './pages/messages/messages.component';
+import { WiresComponent } from './pages/wires/wires.component';
+import { WireComponent } from './pages/wire/wire.component';
+import { SectionTitleComponent } from './components/section-title/section-title.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +33,6 @@ import { ModifyComponent } from './pages/modify/modify.component';
     HomeComponent,
     ClientComponent,
     ManagerComponent,
-    TransferComponent,
     ButtonSendComponent,
     FormComponent,
     TableDisplayComponent,
@@ -40,7 +45,14 @@ import { ModifyComponent } from './pages/modify/modify.component';
     LoanComponent,
     MessageComponent,
     FormClientComponent,
-    ModifyComponent
+    ModifyComponent,
+    ClientsComponent,
+    LoansComponent,
+    ManagersComponent,
+    MessagesComponent,
+    WiresComponent,
+    WireComponent,
+    SectionTitleComponent,
   ],
   imports: [
     BrowserModule,

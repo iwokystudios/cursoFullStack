@@ -13,6 +13,7 @@ import { SongDisplayComponent } from './pages/song-display/song-display.componen
 import { CardComponent } from './components/card/card.component';
 import { TableDisplayComponent } from './components/table-display/table-display.component';
 import { TableRowComponent } from './components/table-row/table-row.component';
+import { CollectionDisplayComponent } from './pages/collection-display/collection-display.component';
 
 
 
@@ -28,12 +29,13 @@ import { TableRowComponent } from './components/table-row/table-row.component';
     SongDisplayComponent,
     CardComponent,
     TableDisplayComponent,
-    TableRowComponent
+    TableRowComponent,
+    CollectionDisplayComponent
   ],
   imports: [
     CommonModule,
     MainViewRoutingModule,
-    CoreModule
+    CoreModule,
   ],
   exports: [
     MainViewComponent

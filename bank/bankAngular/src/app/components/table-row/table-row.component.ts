@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Client } from 'src/models/client';
 
 @Component({
@@ -10,7 +11,7 @@ export class TableRowComponent implements OnInit {
 
   @Input() client?: Client;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -19,8 +20,8 @@ export class TableRowComponent implements OnInit {
 
   }
 
-  modifyClient() {
-    
+  modifyClient(id: number) {
+      this.router.navigate(["/clients/" + id]);
   }
 
 }
