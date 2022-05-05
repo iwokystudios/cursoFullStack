@@ -7,6 +7,26 @@
     align-items: center;
     background-color: #eceeef;
     
+    .top-bar-controls {
+        color: white;
+        display: flex;
+        gap: 1rem;
+    
+        button {
+            font-size: 2rem;
+            font-weight: 400;
+            border-radius: 50%;
+            width: 3rem;
+            color: #a7a7a7;
+            aspect-ratio: 1/1;
+            background-color: #121212;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    
 
     .bar {
         width: 40%;

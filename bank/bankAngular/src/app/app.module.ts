@@ -26,6 +26,9 @@ import { MessagesComponent } from './pages/messages/messages.component';
 import { WiresComponent } from './pages/wires/wires.component';
 import { WireComponent } from './pages/wire/wire.component';
 import { SectionTitleComponent } from './components/section-title/section-title.component';
+import { MainContentComponent } from './components/main-content/main-content.component';
+import { MainBodyComponent } from './components/main-body/main-body.component';
+import { NewClientComponent } from './pages/new-client/new-client.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +56,9 @@ import { SectionTitleComponent } from './components/section-title/section-title.
     WiresComponent,
     WireComponent,
     SectionTitleComponent,
+    MainContentComponent,
+    MainBodyComponent,
+    NewClientComponent,
   ],
   imports: [
     BrowserModule,

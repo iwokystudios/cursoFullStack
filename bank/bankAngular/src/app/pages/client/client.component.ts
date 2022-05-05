@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -11,9 +12,14 @@ import { ClientService } from 'src/services/client.service';
 })
 export class ClientComponent implements OnInit {
 
-  client?: Observable<Client>;
+  client?: Client;
+  // client?: Observable<Client>;
 
-  constructor(private clientService: ClientService, private route: ActivatedRoute) { }
+  constructor(
+    private clientService: ClientService,
+    private route: ActivatedRoute,
+    private location: Location,
+    ) { }
 
   ngOnInit(): void {
     this.getClient();
@@ -24,5 +30,11 @@ export class ClientComponent implements OnInit {
     this.client = this.clientService.getClient(id);
     console.log(this.client)
   }
+
+  goBack(): void {
+    this.location.back();
+  }
+
+  
 
 }

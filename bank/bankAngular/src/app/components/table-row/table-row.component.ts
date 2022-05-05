@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Client } from 'src/models/client';
+import { ClientService } from 'src/services/client.service';
 
 @Component({
   selector: 'app-table-row',
@@ -11,17 +12,18 @@ export class TableRowComponent implements OnInit {
 
   @Input() client?: Client;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private clientService: ClientService) { }
 
   ngOnInit(): void {
   }
 
-  deleteClient() {
-
-  }
-
   modifyClient(id: number) {
       this.router.navigate(["/clients/" + id]);
+  }
+
+  deleteClient(client : Client): void {
+    this.client = undefined;
+    this.clientService.deleteClient(client.id).subscribe();
   }
 
 }

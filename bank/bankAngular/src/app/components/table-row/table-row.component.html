@@ -4,7 +4,7 @@
     <span class="money">{{ client.saldo }}</span>
     <div class="row-controllers">
         <app-button-send (onPressMyButton)="modifyClient(client.id)" text="Modify"></app-button-send>
-        <app-button-send (onPressMyButton)="deleteClient()" text="Delete"></app-button-send>
+        <app-button-send (onPressMyButton)="deleteClient(client)" text="Delete"></app-button-send>
     </div>
 
     

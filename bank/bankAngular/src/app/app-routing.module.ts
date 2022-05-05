@@ -9,6 +9,7 @@ import { ManagerComponent } from './pages/manager/manager.component';
 import { ManagersComponent } from './pages/managers/managers.component';
 import { MessageComponent } from './pages/message/message.component';
 import { MessagesComponent } from './pages/messages/messages.component';
+import { NewClientComponent } from './pages/new-client/new-client.component';
 import { WireComponent } from './pages/wire/wire.component';
 import { WiresComponent } from './pages/wires/wires.component';
 
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'loans/:id' , component: LoanComponent},
   { path: 'wires/:id' , component: WireComponent},
   { path: 'messages/:id' , component: MessageComponent},
+  { path: 'new-client' , component: NewClientComponent},
 ];
 
 @NgModule({
