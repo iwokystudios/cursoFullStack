@@ -13,7 +13,9 @@
             <span class="duration">O</span>
         </div>
         <div *ngFor="let song of songs; let i = index" class="song-row">
-            <span class="number">{{i + 1}}</span>
+            <!-- <span class="number"><a (click)="playPlaylist()">{{i + 1}}</a></span> -->
+            <span class="number"><a (click)="playSong(song)">{{i + 1}}</a></span>
+            <!-- <span class="number">{{i + 1}}</span> -->
             <span class="song">
                 <span class="song-img"><img src="../../../../assets/images/disc01.png" alt=""></span>
                 <span class="song-description">

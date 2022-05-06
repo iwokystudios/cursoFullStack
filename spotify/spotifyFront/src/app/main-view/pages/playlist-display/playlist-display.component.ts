@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Playlist } from 'src/models/playlist';
 import { PlaylistService } from 'src/app/services/playlist.service';
 import { Observable } from 'rxjs';
@@ -17,8 +17,11 @@ export class PlaylistDisplayComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private playlistService: PlaylistService
-  ) { }
+    private playlistService: PlaylistService,
+    private router: Router,
+  ) {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+   }
 
   ngOnInit(): void {
     this.getPlaylist();

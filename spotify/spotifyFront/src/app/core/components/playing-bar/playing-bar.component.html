@@ -3,7 +3,8 @@
         <img src="../../../../assets/images/disc01.png" alt="">
     </div>
     <div class="playing-info">
-        <span class="title">A solas</span>
+        <span class="title">{{ songPlaying.song_name }}</span>
+        <!-- <span class="title">A solas</span> -->
         <caption class="author">Maria Becerra</caption>
     </div>
     <div class="playing-fav">
@@ -14,7 +15,7 @@
     <div class="controls-buttons">
         <img src="../../../../assets/images/shuffle.png" class="controls" alt="">
         <img src="../../../../assets/images/back-button.png" class="controls" alt="">
-        <span class="play-pause"><img src="../../../../assets/images/play(1).png" alt=""></span>
+        <span class="play-pause" (click)="audioPlayStop()"><img src="../../../../assets/images/play(1).png" alt=""></span>
         <img src="../../../../assets/images/next-button.png" class="controls" alt="">
         <img src="../../../../assets/images/repeat(1).png" class="controls" alt="">
     </div>

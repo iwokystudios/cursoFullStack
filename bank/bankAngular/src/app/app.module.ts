@@ -29,6 +29,16 @@ import { SectionTitleComponent } from './components/section-title/section-title.
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { MainBodyComponent } from './components/main-body/main-body.component';
 import { NewClientComponent } from './pages/new-client/new-client.component';
+import { TableClientsComponent } from './components/table-clients/table-clients.component';
+import { TableManagersComponent } from './components/table-managers/table-managers.component';
+import { TableMessagesComponent } from './components/table-messages/table-messages.component';
+import { TableLoansComponent } from './components/table-loans/table-loans.component';
+import { TableWiresComponent } from './components/table-wires/table-wires.component';
+import { TableRowClientComponent } from './components/table-row-client/table-row-client.component';
+import { TableRowLoansComponent } from './components/table-row-loans/table-row-loans.component';
+import { TableRowWiresComponent } from './components/table-row-wires/table-row-wires.component';
+import { TableRowManagersComponent } from './components/table-row-managers/table-row-managers.component';
+import { TableRowMessagesComponent } from './components/table-row-messages/table-row-messages.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +69,16 @@ import { NewClientComponent } from './pages/new-client/new-client.component';
     MainContentComponent,
     MainBodyComponent,
     NewClientComponent,
+    TableClientsComponent,
+    TableManagersComponent,
+    TableMessagesComponent,
+    TableLoansComponent,
+    TableWiresComponent,
+    TableRowClientComponent,
+    TableRowLoansComponent,
+    TableRowWiresComponent,
+    TableRowManagersComponent,
+    TableRowMessagesComponent,
   ],
   imports: [
     BrowserModule,

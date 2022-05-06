@@ -28,7 +28,8 @@ export class AppHomeComponent implements OnInit {
 
   getCollections(): void {
     this.collectionService.getCollections()
-      .subscribe(collections => this.collections = collections)
+      .subscribe(collections => this.collections = collections);
+    console.log("hola");
   }
 
 }
