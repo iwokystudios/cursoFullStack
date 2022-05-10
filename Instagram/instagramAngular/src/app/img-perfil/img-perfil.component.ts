@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { User } from '../perfilUsuario';
 import { UserE } from '../perfilesExternos';
 
@@ -16,9 +16,15 @@ export class ImgPerfilComponent implements OnInit {
     perfil: 'raphtalia',
     img: 'https://i.pinimg.com/564x/87/35/60/8735602e5dd96beaa0e0af8401cc7821.jpg'
   }
+  
+  @Output() onPress = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onClick() {
+		this.onPress.emit();
+	}
 }

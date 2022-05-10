@@ -5,19 +5,8 @@
         <a href=""><fa-icon [icon] ="faSquarePlus"></fa-icon></a>
         <a href=""><fa-icon [icon]="faCompass"></fa-icon></a>
         <a href=""><fa-icon [icon]="faHeart"></fa-icon></a>
-        <img-perfil class="imgPerfil"></img-perfil>
-        <div class="second__menu"><app-menu-perfil></app-menu-perfil></div>
-        
+        <img-perfil (onPress)="toggleMenu()" class="imgPerfil" onClick></img-perfil>
+        <div [ngClass]="{'second__menu': true, 'second_menu_hidden': !showMenu}" >
+            <app-menu-perfil ></app-menu-perfil>
+        </div>
     </div>
-
-<script>
-    // const menu = document.getElementsByClassName("second__menu")
-
-    // function () {
-    //     if (visibility == hidden) {
-    //         at
-    //     } else {
-            
-    //     }
-    // }
-</script>

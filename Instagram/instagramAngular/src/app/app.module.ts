@@ -24,6 +24,7 @@ import { TopPostComponent } from './top-post/top-post.component';
 import { FotoPostComponent } from './foto-post/foto-post.component';
 import { ComentsPostComponent } from './coments-post/coments-post.component';
 import { MenuPerfilComponent } from './menu-perfil/menu-perfil.component';
+import { ListPostComponent } from './list-post/list-post.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MenuPerfilComponent } from './menu-perfil/menu-perfil.component';
     TopPostComponent,
     FotoPostComponent,
     ComentsPostComponent,
-    MenuPerfilComponent
+    MenuPerfilComponent,
+    ListPostComponent
   ],
   imports: [
     BrowserModule,

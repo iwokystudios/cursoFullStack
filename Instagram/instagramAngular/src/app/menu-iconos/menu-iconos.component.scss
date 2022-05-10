@@ -18,7 +18,9 @@
     position: absolute;
     top: 60px;
     right: 0;
-    visibility: hidden;
+}
+.second_menu_hidden {
+    display:none;
 }
 
 .iconos:hover .second__menu,
